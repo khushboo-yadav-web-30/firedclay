@@ -283,16 +283,11 @@ html {
     min-height: 100vh;
     background: #000000;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
     z-index: 1;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
-}
-
-.hero-section.scroll-back {
-    transform: scale(0.95);
-    opacity: 0.7;
+    /* Hero section stays clear, no blur/scale effects */
 }
 
 /* Video Background */
@@ -347,12 +342,6 @@ html {
     z-index: 10;
     padding-top: 100px;
     padding-bottom: 100px;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
-}
-
-.hero-section.scroll-back .hero-content-wrapper {
-    transform: translateY(-30px) scale(0.98);
-    opacity: 0.8;
 }
 
 /* Showreel Button */
@@ -604,19 +593,13 @@ html {
     position: relative;
     margin-top: -150px;
     padding-top: 200px;
-    z-index: 2;
+    z-index: 10;
     background: white;
     border-radius: 4rem 4rem 0 0;
-    box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.15);
-    transform: translateY(100px);
+    box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.2);
+    will-change: transform, opacity;
+    transform: translateY(200px);
     opacity: 0;
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.section-overlap.overlap-active {
-    transform: translateY(0);
-    opacity: 1;
-    margin-top: -150px;
 }
 
 @keyframes slideUpOverlap {
