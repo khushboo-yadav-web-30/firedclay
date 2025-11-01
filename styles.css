@@ -258,6 +258,8 @@ html {
 #mainHeader {
     transition: all 0.3s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    position: relative;
 }
 
 #mainHeader.scrolled {
@@ -302,6 +304,11 @@ html {
     align-items: center;
     overflow: hidden;
     transition: height 0.3s ease;
+    z-index: 1;
+}
+
+/* Ensure hero stays below header */
+body > .hero {
     z-index: 1;
 }
 
@@ -494,9 +501,48 @@ html {
     margin-top: var(--hero-overlap, -48px);
     padding-top: 150px;
     z-index: 10;
-    background: white;
     border-radius: 3rem 3rem 0 0;
     transition: margin-top 0.3s ease;
+}
+
+/* Ensure sections with different backgrounds maintain z-index */
+.section-overlap.bg-white {
+    background: white;
+}
+
+.section-overlap.bg-light-gradient {
+    background: linear-gradient(to bottom, #F9FAFB, white);
+}
+
+.section-overlap.testimonials-section,
+.section-overlap.stats-section,
+.section-overlap.newsletter-section {
+    background: inherit; /* Keep existing background */
+}
+
+/* First section after hero should have more rounded top */
+#categories.section-overlap {
+    border-radius: 3rem 3rem 0 0;
+}
+
+/* All sections should maintain z-index to scroll over hero */
+.section-overlap {
+    position: relative;
+    z-index: 10;
+}
+
+/* First section (categories) should overlap hero with rounded corners */
+#categories.section-overlap {
+    border-radius: 3rem 3rem 0 0;
+    margin-top: var(--hero-overlap, -48px);
+    padding-top: 150px;
+}
+
+/* Subsequent sections flow normally but still have z-index */
+.section-overlap:not(#categories) {
+    border-radius: 0;
+    margin-top: 0;
+    padding-top: 6rem;
 }
 
 @keyframes slideUpOverlap {
