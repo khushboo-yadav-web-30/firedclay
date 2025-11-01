@@ -914,92 +914,39 @@ function initExperienceCounter() {
 // OVERLAP ANIMATIONS ON SCROLL
 // ========================================
 function initOverlapAnimations() {
-    const heroSection = document.querySelector('.hero-section');
     const overlapSections = document.querySelectorAll('.section-overlap');
     
-    if (!heroSection || overlapSections.length === 0) return;
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
     
-    let ticking = false;
-    const viewportHeight = window.innerHeight;
-    
-    function updateOverlap() {
-        const scrolled = window.pageYOffset;
-        
-        // Hero section is fixed, so sections scroll over it
-        overlapSections.forEach((section) => {
-            const sectionRect = section.getBoundingClientRect();
-            const sectionTop = sectionRect.top;
-            
-            // Calculate overlap progress
-            // Section starts at 100vh (after hero), we want it to appear as it scrolls up
-            const overlapStart = viewportHeight * 0.7; // Start appearing at 70% of viewport
-            const overlapEnd = viewportHeight; // Fully visible when section reaches top
-            
-            let overlapProgress = 0;
-            
-            if (scrolled >= overlapStart && scrolled < overlapEnd) {
-                // Section is sliding over hero
-                overlapProgress = (scrolled - overlapStart) / (overlapEnd - overlapStart);
-            } else if (scrolled >= overlapEnd) {
-                // Section is fully over hero
-                overlapProgress = 1;
-            }
-            
-            // Smooth fade-in and slide-up animation
-            if (overlapProgress > 0) {
-                const easedProgress = overlapProgress < 0.5 
-                    ? 2 * overlapProgress * overlapProgress 
-                    : 1 - Math.pow(-2 * overlapProgress + 2, 3) / 2;
-                
-                const opacity = Math.min(1, easedProgress * 1.2);
-                const translateY = (1 - easedProgress) * 100;
-                
-                section.style.opacity = opacity;
-                section.style.transform = `translateY(${translateY}px)`;
-                section.classList.add('overlap-active');
-            } else {
-                // Before overlap starts
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(100px)';
-                section.classList.remove('overlap-active');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.animation = 'slideUpOverlap 1s ease-out forwards';
+                    entry.target.style.opacity = '1';
+                }, index * 100);
             }
         });
-        
-        // Video fade on scroll
-        const heroVideo = document.querySelector('.hero-video');
-        if (heroVideo) {
-            const opacity = Math.max(0, 1 - (scrolled / viewportHeight));
-            heroVideo.style.opacity = opacity * 0.3;
-            
-            // Also fade the 3D gradient
-            const hero3dCanvas = document.getElementById('hero3dCanvas');
-            if (hero3dCanvas) {
-                hero3dCanvas.style.opacity = opacity * 0.6;
-            }
-        }
-        
-        ticking = false;
-    }
+    }, observerOptions);
     
-    function onScroll() {
-        if (!ticking) {
-            window.requestAnimationFrame(updateOverlap);
-            ticking = true;
-        }
-    }
-    
-    // Initial check
-    updateOverlap();
-    
-    // Smooth scroll event listener with throttling
-    window.addEventListener('scroll', onScroll, { passive: true });
-    
-    // Resize handler
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(updateOverlap, 100);
+    overlapSections.forEach(section => {
+        section.style.opacity = '0';
+        observer.observe(section);
     });
+    
+    // Video fade on scroll
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroHeight = document.querySelector('.hero-section').offsetHeight;
+            const opacity = Math.max(0, 1 - (scrolled / heroHeight));
+            heroVideo.style.opacity = opacity * 0.3;
+        });
+    }
 }
 
 // ========================================

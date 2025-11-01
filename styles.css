@@ -277,16 +277,12 @@ html {
 }
 
 /* ========================================
-   HERO SECTION (FIXED)
+   HERO SECTION
    ======================================== */
 .hero-section {
     min-height: 100vh;
-    height: 100vh;
     background: #000000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -594,23 +590,12 @@ html {
 /* Overlapping Section Animation */
 .section-overlap {
     position: relative;
-    margin-top: 100vh; /* Start after fixed hero section */
+    margin-top: -100px;
     padding-top: 150px;
-    z-index: 10;
+    z-index: 2;
     background: white;
     border-radius: 3rem 3rem 0 0;
-    box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.3);
-    will-change: transform, opacity;
-    /* Initial state - hidden until scrolled */
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-/* When visible (scrolled into view) */
-.section-overlap.overlap-active {
-    opacity: 1;
-    transform: translateY(0);
+    animation: slideUpOverlap 1s ease-out;
 }
 
 @keyframes slideUpOverlap {
@@ -673,7 +658,7 @@ html {
 
 @media (max-width: 768px) {
     .hero-content-wrapper {
-        padding-top: 80px;
+    padding-top: 80px;
         padding-bottom: 60px;
     }
     
@@ -683,8 +668,8 @@ html {
     }
     
     .section-overlap {
-        margin-top: 100vh;
-        padding-top: 120px;
+        margin-top: -50px;
+        padding-top: 100px;
         border-radius: 2rem 2rem 0 0;
     }
 }
