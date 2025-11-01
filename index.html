@@ -102,43 +102,78 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Video Background -->
     <section id="home" class="hero-section position-relative overflow-hidden">
-        <div class="hero-background"></div>
+        <!-- Video Background -->
+        <div class="hero-video-wrapper">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="https://videos.pexels.com/video-files/3045163/3045163-uhd_2560_1440_25fps.mp4" type="video/mp4">
+                <!-- Fallback video or image -->
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        
+        <!-- 3D Gradient Effect Background -->
+        <div class="hero-3d-gradient">
+            <canvas id="hero3dCanvas"></canvas>
+        </div>
+        
+        <!-- Floating Orbs -->
         <div class="hero-gradient-orb hero-orb-1"></div>
         <div class="hero-gradient-orb hero-orb-2"></div>
         <div class="hero-grid"></div>
         
-        <div class="container position-relative" style="padding-top: 8rem; padding-bottom: 5rem;">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="hero-badge mb-4 fade-in-up">
-                        <i class="bi bi-stars me-2"></i>
-                        Leading Industrial Machinery Manufacturer Since 1999
+        <!-- Hero Content -->
+        <div class="container position-relative hero-content-wrapper">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 fade-in-left">
+                    <!-- Showreel Button (Top Left) -->
+                    <div class="hero-showreel-btn mb-4">
+                        <button class="showreel-button" id="showreelBtn">
+                            <div class="showreel-icon">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                            <span>SHOWREEL</span>
+                        </button>
                     </div>
                     
-                    <h1 class="hero-title mb-4 fade-in-up" style="animation-delay: 0.2s;">
-                        Precision Engineering
+                    <!-- Experience Counter (Top Right) -->
+                    <div class="hero-experience-counter">
+                        <div class="experience-number">
+                            <span id="expCounter">25</span>+
+                            <i class="bi bi-arrow-up experience-arrow"></i>
+                        </div>
+                        <div class="experience-text">years of experience</div>
+                    </div>
+                    
+                    <!-- Main Headline -->
+                    <h1 class="hero-title mb-4">
+                        Industrial Machinery
                         <br>
-                        <span class="gradient-text">Made Perfect</span>
+                        <span class="gradient-text">Driving Business</span>
+                        <br>
+                        Excellence
                     </h1>
                     
-                    <p class="hero-subtitle mb-5 fade-in-up" style="animation-delay: 0.4s;">
-                        Transform your production with cutting-edge corrugation, slitting, and paper processing machinery designed for excellence
+                    <!-- Sub-headline -->
+                    <p class="hero-subtitle mb-5">
+                        PARTNER WITH DEDICATED EXPERTS WHO 'GET' YOUR PRODUCTION NEEDS
                     </p>
                     
-                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-5 fade-in-up" style="animation-delay: 0.6s;">
-                        <button class="btn btn-gradient-danger btn-lg">
+                    <!-- CTA Buttons -->
+                    <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
+                        <button class="btn btn-gradient-danger btn-lg btn-hero-cta">
                             Explore Products
-                            <i class="bi bi-chevron-right ms-2"></i>
+                            <i class="bi bi-arrow-right ms-2"></i>
                         </button>
-                        <button class="btn btn-outline-light btn-lg">
+                        <button class="btn btn-outline-light btn-lg btn-hero-secondary">
                             <i class="bi bi-play-circle me-2"></i>
                             Watch Demo
                         </button>
                     </div>
                     
-                    <div class="hero-badges fade-in-up" style="animation-delay: 0.8s;">
+                    <!-- Stats Badges -->
+                    <div class="hero-badges">
                         <div class="badge-item">
                             <span class="pulse-dot-green me-2"></span>
                             ISO 9001:2015 Certified
@@ -147,27 +182,55 @@
                             <span class="pulse-dot-green me-2"></span>
                             500+ Happy Clients
                         </div>
-                        <div class="badge-item">
-                            <span class="pulse-dot-green me-2"></span>
-                            25+ Years Excellence
-                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 text-end">
+                    <!-- Large CTA Button (Bottom Right) -->
+                    <div class="hero-large-cta fade-in-right">
+                        <button class="large-cta-button" id="getStartedBtn">
+                            <div class="large-cta-icon">
+                                <i class="bi bi-arrow-up"></i>
+                            </div>
+                            <div class="large-cta-text">GET STARTED</div>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="floating-element floating-square"></div>
-        <div class="floating-element floating-circle"></div>
+        <!-- Scroll Indicator -->
+        <div class="hero-scroll-indicator">
+            <div class="scroll-indicator-line"></div>
+            <span class="scroll-indicator-text">Scroll Down</span>
+        </div>
         
-        <div class="hero-wave">
+        <!-- Wave Separator -->
+        <div class="hero-wave-separator">
             <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
             </svg>
         </div>
     </section>
+    
+    <!-- Hero Modal for Showreel Video -->
+    <div class="modal fade" id="showreelModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <video class="w-100" controls autoplay>
+                        <source src="https://videos.pexels.com/video-files/3045163/3045163-uhd_2560_1440_25fps.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Category Section -->
-    <section id="categories" class="section-padding bg-white position-relative">
+    <!-- Category Section with Overlap Animation -->
+    <section id="categories" class="section-padding bg-white position-relative section-overlap">
         <div class="bg-decoration bg-decoration-1"></div>
         <div class="bg-decoration bg-decoration-2"></div>
         

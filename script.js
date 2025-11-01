@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initForms();
     initSmoothScroll();
     initActiveNavigation();
+    initHero3DGradient();
+    initShowreelModal();
+    initGetStartedButton();
+    initExperienceCounter();
+    initOverlapAnimations();
 });
 
 // ========================================
@@ -753,6 +758,224 @@ function initCookieConsent() {
         // showCookieBanner();
     }
 }
+
+// ========================================
+// HERO 3D GRADIENT CANVAS
+// ========================================
+function initHero3DGradient() {
+    const canvas = document.getElementById('hero3dCanvas');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    let animationFrame;
+    
+    function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+    }
+    
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    const particles = [];
+    const particleCount = 100;
+    
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.radius = Math.random() * 2 + 1;
+            this.opacity = Math.random() * 0.5 + 0.2;
+        }
+        
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        }
+        
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(220, 38, 38, ${this.opacity})`;
+            ctx.fill();
+        }
+    }
+    
+    // Create particles
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
+    
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw connections
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 150) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(220, 38, 38, ${0.2 * (1 - distance / 150)})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+        }
+        
+        // Update and draw particles
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+        
+        animationFrame = requestAnimationFrame(animate);
+    }
+    
+    // Start animation when visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animate();
+            } else {
+                cancelAnimationFrame(animationFrame);
+            }
+        });
+    });
+    
+    observer.observe(canvas.parentElement);
+}
+
+// ========================================
+// SHOWREEL MODAL
+// ========================================
+function initShowreelModal() {
+    const showreelBtn = document.getElementById('showreelBtn');
+    const showreelModal = document.getElementById('showreelModal');
+    
+    if (showreelBtn && showreelModal) {
+        showreelBtn.addEventListener('click', () => {
+            const modal = new bootstrap.Modal(showreelModal);
+            modal.show();
+        });
+    }
+}
+
+// ========================================
+// GET STARTED BUTTON
+// ========================================
+function initGetStartedButton() {
+    const getStartedBtn = document.getElementById('getStartedBtn');
+    
+    if (getStartedBtn) {
+        getStartedBtn.addEventListener('click', () => {
+            // Scroll to contact section or trigger action
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    }
+}
+
+// ========================================
+// EXPERIENCE COUNTER ANIMATION
+// ========================================
+function initExperienceCounter() {
+    const expCounter = document.getElementById('expCounter');
+    if (!expCounter) return;
+    
+    const target = 25;
+    let current = 0;
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            expCounter.textContent = target;
+            clearInterval(timer);
+        } else {
+            expCounter.textContent = Math.floor(current);
+        }
+    }, 16);
+}
+
+// ========================================
+// OVERLAP ANIMATIONS ON SCROLL
+// ========================================
+function initOverlapAnimations() {
+    const overlapSections = document.querySelectorAll('.section-overlap');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.animation = 'slideUpOverlap 1s ease-out forwards';
+                    entry.target.style.opacity = '1';
+                }, index * 100);
+            }
+        });
+    }, observerOptions);
+    
+    overlapSections.forEach(section => {
+        section.style.opacity = '0';
+        observer.observe(section);
+    });
+    
+    // Video fade on scroll
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroHeight = document.querySelector('.hero-section').offsetHeight;
+            const opacity = Math.max(0, 1 - (scrolled / heroHeight));
+            heroVideo.style.opacity = opacity * 0.3;
+        });
+    }
+}
+
+// ========================================
+// ENHANCED SCROLL ANIMATIONS
+// ========================================
+function initEnhancedScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in-up');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Call enhanced scroll animations
+initEnhancedScrollAnimations();
 
 // ========================================
 // LOADING ANIMATION COMPLETE
