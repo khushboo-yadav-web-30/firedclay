@@ -69,6 +69,35 @@ html {
     padding-bottom: 2rem;
 }
 
+/* Process Section - Ensure full visibility */
+#how-it-works.section-padding {
+    padding-bottom: 10rem !important;
+}
+
+#how-it-works .container {
+    overflow: visible !important;
+    padding-bottom: 3rem !important;
+}
+
+#how-it-works .row.position-relative {
+    margin-bottom: 3rem !important;
+    padding-bottom: 2rem !important;
+    overflow: visible !important;
+}
+
+/* Alternative targeting for browsers that don't support :has() */
+section.bg-white.section-overlap:has(.process-card),
+section:has(.process-card) {
+    padding-bottom: 10rem !important;
+}
+
+section.bg-white .row:has(.process-card),
+.row.position-relative:has(.process-card) {
+    margin-bottom: 3rem !important;
+    padding-bottom: 2rem !important;
+    overflow: visible !important;
+}
+
 #categories .row {
     overflow: visible;
     margin-bottom: 2rem;
@@ -812,21 +841,54 @@ body > .hero {
     }
     
     .process-card {
-        min-height: 300px;
-        padding: 2rem 1.5rem;
+        min-height: 320px;
+        padding: 2rem 1.5rem 2.5rem 1.5rem;
+        margin-bottom: 2rem;
     }
     
     .process-number-bg {
         font-size: 10rem;
     }
     
+    #how-it-works.section-padding {
+        padding-bottom: 8rem !important;
+    }
+    
+    #how-it-works .row.position-relative {
+        margin-bottom: 2rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    
+    section.bg-white:has(.process-card),
+    .section-overlap:has(.process-card) {
+        padding-bottom: 8rem !important;
+    }
+    
+    .section-padding .row:has(.process-card) {
+        margin-bottom: 2rem;
+    }
+    
+    #testimonials.section-padding {
+        padding-bottom: 8rem !important;
+    }
+    
+    #testimonials .testimonial-slider-wrapper {
+        padding-bottom: 3rem !important;
+    }
+    
     .testimonial-card {
-        padding: 2rem;
-        min-height: 320px;
+        padding: 2rem 2rem 2.5rem 2rem;
+        min-height: 340px;
+        margin-bottom: 2rem;
     }
     
     .testimonial-text {
         font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-author {
+        padding-top: 0.75rem;
     }
 }
 
@@ -875,9 +937,9 @@ body > .hero {
     }
     
     .process-card {
-        min-height: 280px;
-        padding: 1.75rem 1.25rem;
-        margin-bottom: 1.5rem;
+        min-height: 300px;
+        padding: 1.75rem 1.25rem 2rem 1.25rem;
+        margin-bottom: 2rem;
     }
     
     .process-number-bg {
@@ -896,25 +958,63 @@ body > .hero {
     
     .process-title {
         font-size: 1.125rem;
+        margin-bottom: 0.75rem;
     }
     
     .process-description {
         font-size: 0.875rem;
+        line-height: 1.5;
+    }
+    
+    #how-it-works.section-padding {
+        padding-bottom: 7rem !important;
+    }
+    
+    #how-it-works .row.position-relative {
+        margin-bottom: 2rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    
+    section.bg-white:has(.process-card),
+    .section-overlap:has(.process-card) {
+        padding-bottom: 7rem !important;
+    }
+    
+    .section-padding .row:has(.process-card) {
+        margin-bottom: 2rem;
+    }
+    
+    #testimonials.section-padding {
+        padding-bottom: 7rem !important;
+    }
+    
+    #testimonials .testimonial-slider-wrapper {
+        padding: 1.5rem 0 2.5rem 0 !important;
     }
     
     .testimonial-card {
-        padding: 1.5rem;
-        min-height: 300px;
+        padding: 1.75rem 1.5rem 2rem 1.5rem;
+        min-height: 320px;
+        margin-bottom: 2rem;
     }
     
     .testimonial-text {
         font-size: 1.125rem;
         line-height: 1.6;
         margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
     }
     
-    .testimonial-slider-wrapper {
-        padding: 1rem 0;
+    .testimonial-author {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding-top: 0.5rem;
+    }
+    
+    .testimonial-author img {
+        width: 3rem;
+        height: 3rem;
     }
     
     .carousel-control-prev,
@@ -923,15 +1023,8 @@ body > .hero {
         height: 2.5rem;
     }
     
-    .testimonial-author {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
-    
-    .testimonial-author img {
-        width: 3rem;
-        height: 3rem;
+    .carousel-indicators {
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -959,12 +1052,66 @@ body > .hero {
     }
     
     .process-card {
-        min-height: 260px;
+        min-height: 280px;
+        padding: 1.5rem 1rem 1.75rem 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    #how-it-works.section-padding {
+        padding-bottom: 6rem !important;
+    }
+    
+    #how-it-works .row.position-relative {
+        margin-bottom: 2rem !important;
+        padding-bottom: 1rem !important;
+    }
+    
+    section.bg-white:has(.process-card),
+    .section-overlap:has(.process-card) {
+        padding-bottom: 6rem !important;
+    }
+    
+    .section-padding .row:has(.process-card) {
+        margin-bottom: 2rem;
+    }
+    
+    #testimonials.section-padding {
+        padding-bottom: 6rem !important;
+    }
+    
+    #testimonials .testimonial-slider-wrapper {
+        padding: 1rem 0 2rem 0 !important;
     }
     
     .testimonial-card {
-        min-height: 280px;
-        padding: 1.25rem;
+        min-height: 300px;
+        padding: 1.5rem 1.25rem 1.75rem 1.25rem;
+        margin-bottom: 2rem;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
+    
+    .testimonial-author {
+        padding-top: 0.5rem;
+    }
+    
+    .testimonial-rating {
+        margin-bottom: 1rem !important;
+    }
+    
+    .testimonial-quote-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        top: -1rem;
+        left: 1.5rem;
+    }
+    
+    .testimonial-quote-icon i {
+        font-size: 1.25rem;
     }
 }
 
@@ -1288,15 +1435,16 @@ body > .hero {
     position: relative;
     background: white;
     border-radius: 1rem;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 2rem 3rem 2rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--gray-200);
     transition: all 0.3s ease;
-    height: 100%;
-    overflow: visible;
-    min-height: 320px;
+    height: auto;
+    overflow: visible !important;
+    min-height: 340px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 .process-card:hover {
@@ -1315,6 +1463,7 @@ body > .hero {
     user-select: none;
     z-index: 0;
     line-height: 1;
+    pointer-events: none;
 }
 
 .process-number {
@@ -1377,7 +1526,7 @@ body > .hero {
 .process-title {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     position: relative;
     z-index: 1;
 }
@@ -1387,6 +1536,9 @@ body > .hero {
     position: relative;
     z-index: 1;
     flex: 1;
+    margin-bottom: 0;
+    line-height: 1.6;
+    padding-bottom: 0.5rem;
 }
 
 /* ========================================
@@ -1521,6 +1673,35 @@ body > .hero {
    ======================================== */
 .testimonials-section {
     background: linear-gradient(135deg, #F9FAFB, white);
+    overflow: visible !important;
+}
+
+/* Testimonials Section - Ensure full visibility */
+#testimonials.section-padding {
+    padding-bottom: 10rem !important;
+}
+
+#testimonials .container {
+    overflow: visible !important;
+    padding-bottom: 3rem !important;
+}
+
+#testimonials .testimonial-slider-wrapper {
+    padding-bottom: 4rem !important;
+    margin-bottom: 2rem !important;
+}
+
+#testimonials .carousel {
+    overflow: visible !important;
+}
+
+#testimonials .carousel-inner {
+    overflow: visible !important;
+    padding-bottom: 2rem;
+}
+
+#testimonials .carousel-item {
+    overflow: visible !important;
 }
 
 .testimonial-bg-decoration {
@@ -1548,21 +1729,23 @@ body > .hero {
 .testimonial-slider-wrapper {
     max-width: 56rem;
     margin: 0 auto;
-    padding: 2rem 0;
-    overflow: visible;
+    padding: 2rem 0 3rem 0;
+    overflow: visible !important;
 }
 
 .testimonial-card {
     background: white;
     border: 1px solid var(--gray-200);
     border-radius: 1.5rem;
-    padding: 3rem;
+    padding: 3rem 3rem 3.5rem 3rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    min-height: 350px;
+    min-height: 380px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: visible;
+    overflow: visible !important;
+    margin-bottom: 2rem;
+    position: relative;
 }
 
 .testimonial-quote-icon {
@@ -1600,13 +1783,16 @@ body > .hero {
     line-height: 1.8;
     margin-bottom: 2rem;
     flex: 1;
-    overflow: visible;
+    overflow: visible !important;
+    padding-bottom: 0.5rem;
 }
 
 .testimonial-author {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
 }
 
 .testimonial-author img {
