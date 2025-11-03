@@ -8,12 +8,21 @@
 }
 
 :root {
+    /* Primary Brand Colors (Based on Logo) */
     --primary-red: #DC2626;
     --primary-red-dark: #B91C1C;
     --primary-red-light: #EF4444;
+    --primary-red-hover: #991B1B;
+    
+    /* Secondary Colors - Complementary to Brand */
+    --secondary-orange: #F97316;
     --secondary-purple: #9333EA;
     --secondary-blue: #2563EB;
     --secondary-green: #10B981;
+    
+    /* Accent Colors for Cards/Gradients */
+    --accent-warm: #F97316;
+    --accent-cool: #06B6D4;
     --gray-900: #111827;
     --gray-800: #1F2937;
     --gray-700: #374151;
@@ -57,6 +66,11 @@ html {
    ======================================== */
 .section-padding {
     padding: 6rem 0;
+}
+
+/* Contact Section - Reduced Height */
+#contact.section-padding {
+    padding: 4rem 0 5rem 0;
 }
 
 #categories.section-padding {
@@ -155,18 +169,18 @@ section.bg-white .row:has(.process-card),
 }
 
 .gradient-text {
-    background: linear-gradient(to right, var(--primary-red), #F97316);
+    background: linear-gradient(to right, var(--primary-red), var(--secondary-orange));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .bg-gradient-danger {
-    background: linear-gradient(to right, var(--primary-red), var(--primary-red-light)) !important;
+    background: linear-gradient(to right, var(--primary-red), var(--secondary-orange)) !important;
 }
 
 .btn-gradient-danger {
-    background: linear-gradient(to right, var(--primary-red), var(--primary-red-light));
+    background: linear-gradient(to right, var(--primary-red), var(--secondary-orange));
     border: none;
     color: white;
     font-weight: 500;
@@ -176,6 +190,7 @@ section.bg-white .row:has(.process-card),
 
 .btn-gradient-danger:hover {
     transform: translateY(-2px);
+    background: linear-gradient(to right, var(--primary-red-dark), var(--primary-red));
     box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.4);
     color: white;
 }
@@ -1018,6 +1033,10 @@ body > .hero {
         padding-bottom: 7rem !important;
     }
     
+    #contact.section-padding {
+        padding: 3rem 0 4rem 0;
+    }
+    
     #testimonials .testimonial-slider-wrapper {
         padding: 1.5rem 0 2.5rem 0 !important;
         max-width: 100%;
@@ -1147,6 +1166,14 @@ body > .hero {
         padding-bottom: 6rem !important;
     }
     
+    #contact.section-padding {
+        padding: 2.5rem 0 3.5rem 0;
+    }
+    
+    .contact-form-card {
+        padding: 1.75rem 2rem;
+    }
+    
     #testimonials .testimonial-slider-wrapper {
         padding: 1rem 0 2rem 0 !important;
         max-width: 100%;
@@ -1257,7 +1284,7 @@ body > .hero {
 }
 
 .category-card.gradient-red .category-icon {
-    background: linear-gradient(135deg, var(--primary-red), #F97316);
+    background: linear-gradient(135deg, var(--primary-red), var(--secondary-orange));
 }
 
 .category-card.gradient-purple .category-icon {
@@ -1265,7 +1292,7 @@ body > .hero {
 }
 
 .category-card.gradient-blue .category-icon {
-    background: linear-gradient(135deg, var(--secondary-blue), #06B6D4);
+    background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cool));
 }
 
 .category-card.gradient-green .category-icon {
@@ -2668,11 +2695,11 @@ body > .hero {
 }
 
 .contact-info-card.gradient-red .contact-info-icon {
-    background: linear-gradient(135deg, var(--primary-red), #F97316);
+    background: linear-gradient(135deg, var(--primary-red), var(--secondary-orange));
 }
 
 .contact-info-card.gradient-blue .contact-info-icon {
-    background: linear-gradient(135deg, var(--secondary-blue), #06B6D4);
+    background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cool));
 }
 
 .contact-info-card.gradient-purple .contact-info-icon {
@@ -2685,10 +2712,14 @@ body > .hero {
 
 .contact-form-card {
     background: white;
-    padding: 2.5rem;
+    padding: 2rem 2.5rem;
     border-radius: 1rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--gray-100);
+}
+
+.contact-info-card {
+    padding: 1.25rem 1.5rem;
 }
 
 .contact-form-card .form-label {
