@@ -535,7 +535,7 @@ body > .hero {
 #categories.section-overlap {
     border-radius: 3rem 3rem 0 0;
     margin-top: var(--hero-overlap, -48px);
-    padding-top: 150px;
+    padding-top: 10px;
 }
 
 /* Subsequent sections flow normally but still have z-index */
@@ -2152,15 +2152,439 @@ body > .hero {
     box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
-.map-placeholder {
-    background: var(--gray-200);
+/* ========================================
+   GLOBAL PRESENCE SECTION
+   ======================================== */
+.global-presence-section {
+    margin-top: 3rem;
+}
+
+.global-presence-container {
+    background: linear-gradient(135deg, #F9FAFB 25%, transparent 25%, transparent 50%, #F9FAFB 50%, #F9FAFB 75%, transparent 75%, transparent),
+                linear-gradient(45deg, #F9FAFB 25%, transparent 25%, transparent 50%, #F9FAFB 50%, #F9FAFB 75%, transparent 75%, transparent);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    background-color: #F9FAFB;
+    border: 1px solid #E5E7EB;
     border-radius: 1rem;
-    height: 24rem;
+    padding: 3rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.global-presence-header {
+    text-align: left;
+}
+
+.india-flag {
+    display: inline-block;
+}
+
+.flag-india {
+    width: 60px;
+    height: 40px;
+    background: linear-gradient(to bottom, #FF9933 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #138808 66.66%);
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.flag-india::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid #000080;
+    border-radius: 50%;
+    background: #000080;
+}
+
+.global-presence-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.global-presence-subtitle {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+.country-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.country-item:hover {
+    transform: translateY(-4px);
+}
+
+.country-flag {
+    width: 48px;
+    height: 32px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.country-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-900);
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Country Flags CSS - Using CSS Gradients */
+.flag-usa {
+    background: 
+        repeating-linear-gradient(to bottom, 
+            #B22234 0%, #B22234 7.69%, 
+            #FFFFFF 7.69%, #FFFFFF 15.38%,
+            #B22234 15.38%, #B22234 23.07%,
+            #FFFFFF 23.07%, #FFFFFF 30.76%,
+            #B22234 30.76%, #B22234 38.45%,
+            #FFFFFF 38.45%, #FFFFFF 46.15%,
+            #B22234 46.15%, #B22234 53.85%,
+            #FFFFFF 53.85%, #FFFFFF 61.54%,
+            #B22234 61.54%, #B22234 69.23%,
+            #FFFFFF 69.23%, #FFFFFF 76.92%,
+            #B22234 76.92%, #B22234 84.61%,
+            #FFFFFF 84.61%, #FFFFFF 92.3%,
+            #B22234 92.3%, #B22234 100%
+        ),
+        #3C3B6E;
+    background-size: 100% 100%, 40% 53.33%;
+    background-position: 0 0, 0 0;
+    background-repeat: no-repeat;
+}
+
+.flag-newzealand {
+    background: #00247D;
+    position: relative;
+}
+
+.flag-newzealand::before {
+    content: '★';
+    position: absolute;
+    color: #FFCC00;
+    font-size: 0.7rem;
+    top: 10%;
+    right: 10%;
+}
+
+.flag-uae {
+    background: linear-gradient(to bottom, #006233 0, #006233 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #000000 66.66%);
+}
+
+.flag-iraq {
+    background: linear-gradient(to bottom, #000000 0, #000000 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #007A3D 66.66%);
+}
+
+.flag-congo {
+    background: linear-gradient(135deg, #009543 0, #009543 50%, #FBDE4A 50%, #FBDE4A 100%);
+}
+
+.flag-tanzania {
+    background: linear-gradient(135deg, #1EB53A 0, #1EB53A 33.33%, #000000 33.33%, #000000 66.66%, #00A3DD 66.66%);
+}
+
+.flag-portugal {
+    background: linear-gradient(to right, #006600 0, #006600 50%, #FF0000 50%, #FF0000 100%);
+}
+
+.flag-srilanka {
+    background: #FF8500;
+    position: relative;
+}
+
+.flag-egypt {
+    background: linear-gradient(to bottom, #CE1126 0, #CE1126 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #000000 66.66%);
+}
+
+.flag-mexico {
+    background: linear-gradient(to right, #006847 0, #006847 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #CE1126 66.66%);
+}
+
+.flag-nigeria {
+    background: linear-gradient(to right, #008751 0, #008751 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #008751 66.66%);
+}
+
+.flag-colombia {
+    background: linear-gradient(to bottom, #FFCD00 0, #FFCD00 50%, #003893 50%, #003893 75%, #CE1126 75%);
+}
+
+.flag-bangladesh {
+    background: #006A4E;
+    position: relative;
+}
+
+.flag-bangladesh::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    width: 14px;
+    height: 14px;
+    background: #F42A41;
+    border-radius: 50%;
+}
+
+.flag-nepal {
+    background: linear-gradient(135deg, #DC143C 0, #DC143C 70%, #003893 70%);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.flag-canada {
+    background: #FF0000;
+    position: relative;
+}
+
+.flag-canada::before {
+    content: '🍁';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+}
+
+.flag-ivorycoast {
+    background: linear-gradient(to right, #F77F00 0, #F77F00 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #009639 66.66%);
+}
+
+/* World Map Container */
+.world-map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #F3F4F6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.world-map-dotted {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(229, 231, 235, 0.3) 2px, rgba(229, 231, 235, 0.3) 4px),
+        repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(229, 231, 235, 0.3) 2px, rgba(229, 231, 235, 0.3) 4px);
+}
+
+.world-map-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .global-presence-container {
+        padding: 2rem;
+    }
+    
+    .countries-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem 0.75rem;
+    }
+    
+    .global-presence-title {
+        font-size: 2rem;
+    }
+    
+    .world-map-container {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .global-presence-container {
+        padding: 1.5rem;
+    }
+    
+    .countries-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 0.5rem;
+    }
+    
+    .global-presence-title {
+        font-size: 1.75rem;
+    }
+    
+    .country-flag {
+        width: 40px;
+        height: 28px;
+    }
+    
+    .country-name {
+        font-size: 0.75rem;
+    }
+    
+    .flag-india {
+        width: 48px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .countries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   OUR PRESTIGIOUS CLIENTS SECTION
+   ======================================== */
+.client-title-divider {
+    width: 200px;
+    height: 2px;
+    background: var(--gray-300);
+    margin: 1rem auto 0;
+}
+
+.clients-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.clients-slider {
+    display: flex;
+    gap: 3rem;
+    width: fit-content;
+    animation: scrollClients 30s linear infinite;
+}
+
+.clients-slider.paused {
+    animation-play-state: paused;
+}
+
+.client-logo-item {
+    flex-shrink: 0;
+    width: 200px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.client-logo-item:hover {
+    transform: scale(1.1);
+}
+
+.client-logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    text-align: center;
+    line-height: 1.3;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.client-logo:hover {
+    border-color: #2563EB;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.15);
+    color: #2563EB;
+}
+
+@keyframes scrollClients {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design for Clients Section */
+@media (max-width: 991.98px) {
+    .client-logo-item {
+        width: 180px;
+        height: 110px;
+    }
+    
+    .clients-slider {
+        gap: 2rem;
+    }
+    
+    .client-logo {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .client-logo-item {
+        width: 160px;
+        height: 100px;
+    }
+    
+    .clients-slider {
+        gap: 1.5rem;
+        animation-duration: 25s;
+    }
+    
+    .client-logo {
+        font-size: 0.75rem;
+        padding: 0.75rem;
+    }
+    
+    .client-title-divider {
+        width: 150px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .client-logo-item {
+        width: 140px;
+        height: 90px;
+    }
+    
+    .clients-slider {
+        gap: 1rem;
+        animation-duration: 20s;
+    }
+    
+    .client-logo {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
 }
 
 /* ========================================

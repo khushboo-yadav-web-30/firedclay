@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initForms();
     initSmoothScroll();
     initActiveNavigation();
-    initHeroVideo();
-    initHeroShrink();
-});
+       initHeroVideo();
+       initHeroShrink();
+       initClientsSlider();
+   });
 
 // ========================================
 // SCROLL ANIMATIONS
@@ -846,6 +847,37 @@ function initEnhancedScrollAnimations() {
 
 // Call enhanced scroll animations
 initEnhancedScrollAnimations();
+
+// ========================================
+// CLIENTS AUTO-SCROLL SLIDER
+// ========================================
+function initClientsSlider() {
+    const slider = document.getElementById('clientsSlider');
+    const wrapper = slider?.closest('.clients-slider-wrapper');
+    
+    if (!slider || !wrapper) return;
+    
+    // Pause on hover
+    wrapper.addEventListener('mouseenter', () => {
+        slider.classList.add('paused');
+    });
+    
+    wrapper.addEventListener('mouseleave', () => {
+        slider.classList.remove('paused');
+    });
+    
+    // Pause when hovering over individual client logos
+    const clientItems = slider.querySelectorAll('.client-logo-item');
+    clientItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            slider.classList.add('paused');
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            slider.classList.remove('paused');
+        });
+    });
+}
 
 // ========================================
 // LOADING ANIMATION COMPLETE
