@@ -60,7 +60,18 @@ html {
 }
 
 #categories.section-padding {
-    padding-bottom: 8rem;
+    padding-top: 6rem;
+    padding-bottom: 10rem !important;
+}
+
+#categories .container {
+    overflow: visible;
+    padding-bottom: 2rem;
+}
+
+#categories .row {
+    overflow: visible;
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -507,6 +518,7 @@ body > .hero {
     z-index: 10;
     border-radius: 3rem 3rem 0 0;
     transition: margin-top 0.3s ease;
+    overflow: visible !important;
 }
 
 /* Ensure sections with different backgrounds maintain z-index */
@@ -539,7 +551,9 @@ body > .hero {
 #categories.section-overlap {
     border-radius: 3rem 3rem 0 0;
     margin-top: var(--hero-overlap, -48px);
-    padding-top: 10px;
+    padding-top: 150px;
+    padding-bottom: 8rem !important;
+    overflow: visible;
 }
 
 /* Subsequent sections flow normally but still have z-index */
@@ -834,10 +848,14 @@ body > .hero {
         right: 5%;
     }
     
+    #categories.section-padding {
+        padding-bottom: 8rem !important;
+    }
+    
     .category-card {
         min-height: 280px;
-        padding: 1.5rem 1.25rem 1.75rem 1.25rem;
-        margin-bottom: 1.5rem;
+        padding: 1.5rem 1.25rem 2rem 1.25rem;
+        margin-bottom: 2rem;
     }
     
     .category-title {
@@ -925,9 +943,14 @@ body > .hero {
         opacity: 0.08;
     }
     
+    #categories.section-padding {
+        padding-bottom: 6rem !important;
+    }
+    
     .category-card {
         min-height: 260px;
-        padding: 1.25rem 1rem 1.5rem 1rem;
+        padding: 1.25rem 1rem 2rem 1rem;
+        margin-bottom: 2rem;
     }
     
     .category-description {
@@ -955,13 +978,13 @@ body > .hero {
     padding: 2rem 2rem 2.5rem 2rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--gray-100);
-    overflow: visible;
+    overflow: visible !important;
     transition: all 0.3s ease;
-    height: 100%;
+    height: auto;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
-    min-height: 320px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .category-card:hover {
