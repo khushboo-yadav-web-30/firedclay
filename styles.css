@@ -2583,6 +2583,11 @@ section:has(.faq-accordion) .container {
     overflow: visible !important;
     transition: border-color 0.3s ease;
     min-height: auto;
+    height: auto !important;
+}
+
+.faq-accordion .accordion-item .accordion-header {
+    overflow: visible !important;
 }
 
 .faq-accordion .accordion-item:hover {
@@ -2617,6 +2622,23 @@ section:has(.faq-accordion) .container {
     transition: height 0.35s ease;
 }
 
+.faq-accordion .accordion-collapse:not(.collapse) {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.faq-accordion .accordion-collapse.collapsing {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.faq-accordion .accordion-collapse.collapse.show {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
 .faq-accordion .accordion-body {
     padding: 0 1.5rem 1.5rem;
     color: var(--gray-600);
@@ -2625,6 +2647,9 @@ section:has(.faq-accordion) .container {
     white-space: normal;
     word-wrap: break-word;
     max-height: none !important;
+    height: auto !important;
+    display: block !important;
+    visibility: visible !important;
 }
 
 /* Ensure FAQ columns display properly */
@@ -2674,6 +2699,21 @@ section:has(.faq-accordion) .container {
     .faq-accordion .accordion-button {
         padding: 1.75rem;
         font-size: 1.25rem;
+    }
+    
+    /* Ensure accordion items expand fully on desktop */
+    .faq-accordion .accordion-collapse.show {
+        height: auto !important;
+        max-height: none !important;
+    }
+    
+    .faq-accordion .accordion-collapse.collapsing {
+        height: auto !important;
+        transition: height 0.35s ease !important;
+    }
+    
+    .faq-accordion .accordion-body {
+        min-height: auto !important;
     }
 }
 

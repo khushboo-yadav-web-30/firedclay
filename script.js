@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
        initHeroVideo();
        initHeroShrink();
        initClientsSlider();
+       initAccordionFix();
    });
 
 // ========================================
@@ -875,6 +876,82 @@ function initClientsSlider() {
         
         item.addEventListener('mouseleave', () => {
             slider.classList.remove('paused');
+        });
+    });
+}
+
+// ========================================
+// ACCORDION FIX - Ensure full content visibility
+// ========================================
+function initAccordionFix() {
+    const accordionElements = document.querySelectorAll('.faq-accordion .accordion-collapse');
+    
+    accordionElements.forEach(element => {
+        // Listen for shown event (when accordion fully opens)
+        element.addEventListener('shown.bs.collapse', function() {
+            const accordionBody = this.querySelector('.accordion-body');
+            if (accordionBody) {
+                // Force height recalculation
+                accordionBody.style.height = 'auto';
+                accordionBody.style.maxHeight = 'none';
+                accordionBody.style.overflow = 'visible';
+                
+                // Ensure parent collapse has proper height
+                this.style.height = 'auto';
+                this.style.maxHeight = 'none';
+                this.style.overflow = 'visible';
+                
+                // Trigger reflow to ensure proper rendering
+                void accordionBody.offsetHeight;
+            }
+        });
+        
+        // Listen for showing event (during animation)
+        element.addEventListener('showing.bs.collapse', function() {
+            const accordionBody = this.querySelector('.accordion-body');
+            if (accordionBody) {
+                accordionBody.style.overflow = 'visible';
+                accordionBody.style.maxHeight = 'none';
+            }
+        });
+        
+        // Handle already open accordions
+        if (element.classList.contains('show')) {
+            const accordionBody = element.querySelector('.accordion-body');
+            if (accordionBody) {
+                accordionBody.style.height = 'auto';
+                accordionBody.style.maxHeight = 'none';
+                accordionBody.style.overflow = 'visible';
+                element.style.height = 'auto';
+                element.style.maxHeight = 'none';
+                element.style.overflow = 'visible';
+            }
+        }
+    });
+    
+    // Also handle accordion button clicks
+    const accordionButtons = document.querySelectorAll('.faq-accordion .accordion-button');
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-bs-target');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // Wait for animation to complete
+                setTimeout(() => {
+                    if (targetElement.classList.contains('show')) {
+                        const accordionBody = targetElement.querySelector('.accordion-body');
+                        if (accordionBody) {
+                            accordionBody.style.height = 'auto';
+                            accordionBody.style.maxHeight = 'none';
+                            accordionBody.style.overflow = 'visible';
+                            targetElement.style.height = 'auto';
+                            targetElement.style.maxHeight = 'none';
+                            targetElement.style.overflow = 'visible';
+                        }
+                    }
+                }, 400); // Wait for Bootstrap animation (350ms + buffer)
+            }
         });
     });
 }
