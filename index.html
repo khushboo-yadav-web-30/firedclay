@@ -3,1096 +3,686 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MMW Machine - Industrial Machinery Manufacturer</title>
+    <title>Firedclay - Architectural Tiles</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Top Bar -->
-    <div class="top-bar bg-gradient-danger text-white py-2">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="d-flex gap-4">
-                        <a href="tel:+911234567890" class="text-white text-decoration-none d-flex align-items-center gap-2">
-                            <i class="bi bi-telephone"></i>
-                            <span class="d-none d-sm-inline">+91 1234567890</span>
-                        </a>
-                        <a href="mailto:info@mmwmachine.com" class="text-white text-decoration-none d-flex align-items-center gap-2">
-                            <i class="bi bi-envelope"></i>
-                            <span class="d-none d-sm-inline">info@mmwmachine.com</span>
-                        </a>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Swiper Slider -->
+        <section class="hero-section">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide hero-slide">
+                        <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&q=80');"></div>
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-content">
+                                        <h1 class="hero-headline">The commercial tile specialist who understands your technical specs, design vision, and sustainability targets. We get the brief and we're ready to deliver.</h1>
+                                        <p class="hero-text">Since 1983, Firedclay has supported architects and designers to bring their tile projects to life with an unrivalled breadth of tiles, next working day sample delivery, design consultancy and in-house technical experts.</p>
+                                        <div class="hero-buttons">
+                                            <a href="#order-samples" class="hero-btn">
+                                                Order Samples
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                            <a href="#epd-library" class="hero-btn">
+                                                EPD Library
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                            <a href="#ptv-tiles" class="hero-btn">
+                                                +36 PTV Tiles
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                            <a href="#browse-tiles" class="hero-btn">
+                                                Browse All Tiles
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide hero-slide">
+                        <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80');"></div>
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-content">
+                                        <h1 class="hero-headline">The commercial tile specialist who understands your technical specs, design vision, and sustainability targets. We get the brief and we're ready to deliver.</h1>
+                                        <p class="hero-text">Since 1983, Firedclay has supported architects and designers to bring their tile projects to life with an unrivalled breadth of tiles, next working day sample delivery, design consultancy and in-house technical experts.</p>
+                                        <div class="hero-buttons">
+                                            <a href="#order-samples" class="hero-btn">
+                                                Order Samples
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                            <a href="#epd-library" class="hero-btn">
+                                                EPD Library
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                            <a href="#ptv-tiles" class="hero-btn">
+                                                +36 PTV Tiles
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                            <a href="#browse-tiles" class="hero-btn">
+                                                Browse All Tiles
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide hero-slide">
+                        <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80');"></div>
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-content">
+                                        <h1 class="hero-headline">The commercial tile specialist who understands your technical specs, design vision, and sustainability targets. We get the brief and we're ready to deliver.</h1>
+                                        <p class="hero-text">Since 1983, Firedclay has supported architects and designers to bring their tile projects to life with an unrivalled breadth of tiles, next working day sample delivery, design consultancy and in-house technical experts.</p>
+                                        <div class="hero-buttons">
+                                            <a href="#order-samples" class="hero-btn">
+                                                Order Samples
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                            <a href="#epd-library" class="hero-btn">
+                                                EPD Library
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                            <a href="#ptv-tiles" class="hero-btn">
+                                                +36 PTV Tiles
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                            <a href="#browse-tiles" class="hero-btn">
+                                                Browse All Tiles
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                                    <path d="M7 17L17 7M7 7h10v10" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 text-end d-none d-md-block">
-                    <div class="d-flex align-items-center justify-content-end gap-2">
-                        <span class="small">Free Consultation Available</span>
-                        <span class="pulse-dot"></span>
+                
+                <!-- Navigation Arrows -->
+                <div class="swiper-button-next hero-nav-next"></div>
+                <div class="swiper-button-prev hero-nav-prev"></div>
+            </div>
+            
+            <!-- Floating Icon -->
+            <div class="floating-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                    <path d="M12 6v6l4 2" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </section>
+        
+        <!-- Explore Parkside Section -->
+        <section class="explore-parkside-section">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <!-- Left Section - Text Content -->
+                    <div class="col-lg-6 explore-content-col">
+                        <div class="explore-content">
+                            <p class="explore-breadcrumb">/ Explore Firedclay</p>
+                            <h2 class="explore-title">Expert Support at Every Step</h2>
+                            <p class="explore-text">From tile advice to technical documents and inspiration, our resources help you make confident, informed decisions throughout your project.</p>
+                            <div class="explore-links">
+                                <a href="#environmental-sustainability" class="explore-link">
+                                    <span>Environmental & Sustainability</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                                <a href="#technical-services" class="explore-link">
+                                    <span>Technical Services</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                                <a href="#material-source" class="explore-link">
+                                    <span>Visit us on Material Source</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Section - Image -->
+                    <div class="col-lg-6 explore-image-col">
+                        <div class="explore-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80" alt="Firedclay Interior Design" class="explore-image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <!-- Feature 1 -->
+                    <div class="col-lg-3 col-md-6 feature-item">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9" stroke-width="2"/>
+                                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-width="1.5"/>
+                                    <rect x="9" y="9" width="6" height="6" rx="0.5" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-heading">Unrivalled UK stock availability</h3>
+                            <p class="feature-subheading">global sourcing capability</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="col-lg-3 col-md-6 feature-item">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" stroke-width="1.5"/>
+                                    <text x="8" y="14" font-size="7" font-weight="bold" fill="currentColor">CO₂</text>
+                                    <path d="M18 5l-1.5 1.5M18 5l-1.5-1.5M18 5h-1.5" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-heading">Environmental Leadership in our sector</h3>
+                            <p class="feature-subheading">Carbon Neutral by 2030</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="col-lg-3 col-md-6 feature-item">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9" stroke-width="2"/>
+                                    <circle cx="12" cy="9" r="2.5" stroke-width="1.5"/>
+                                    <path d="M6 20c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke-width="1.5"/>
+                                    <circle cx="6" cy="5" r="1.5" fill="currentColor"/>
+                                    <circle cx="18" cy="5" r="1.5" fill="currentColor"/>
+                                    <path d="M6 5l1 1M18 5l-1 1" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-heading">Expert in-house technical capability</h3>
+                            <p class="feature-subheading">to ensure product quality and project support</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="col-lg-3 col-md-6 feature-item">
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <rect x="3" y="9" width="18" height="11" rx="1.5" stroke-width="1.5"/>
+                                    <path d="M7 9V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" stroke-width="1.5"/>
+                                    <path d="M9 13h6" stroke-width="1.5"/>
+                                    <rect x="10" y="16" width="4" height="2" rx="0.5" fill="currentColor"/>
+                                    <text x="10.5" y="18.5" font-size="6" font-weight="bold" fill="white">1</text>
+                                </svg>
+                            </div>
+                            <h3 class="feature-heading">The UKs #1 specialist tile distributor</h3>
+                            <p class="feature-subheading">as part of Topps Group PLC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid py-4">
+            <div class="slider-header">
+                <h2 class="slider-title">New Designer's Choice Tiles</h2>
+                <div class="custom-navigation">
+                    <button class="swiper-button-prev-custom">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="swiper-button-next-custom">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="swiper-button-pause">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 4H10V20H6V4ZM14 4H18V20H14V4Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <button class="swiper-button-play" style="display: none;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <div class="swiper tileSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="tile-card">
+                            <div class="tile-image">
+                                <img src="/placeholder.svg?height=400&width=350" alt="Roots Tile">
+                                <div class="tile-overlay">
+                                    <div class="tile-icons">
+                                        <span><i class="icon">👁</i> 29</span>
+                                        <span><i class="icon">❤</i> 74</span>
+                                        <span>Roots</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile-info">
+                                <div class="tile-specs">
+                                    <span class="spec-item">📦 1 Size</span>
+                                    <span class="spec-item">🎨 5 Colors</span>
+                                    <span class="spec-item">📐 2 Finishes</span>
+                                </div>
+                                <div class="color-options">
+                                    <span class="color-dot" style="background: #e8e8e8;"></span>
+                                    <span class="color-dot" style="background: #c4c4c4;"></span>
+                                    <span class="color-dot" style="background: #8a8a8a;"></span>
+                                    <span class="color-dot" style="background: #4a4a4a;"></span>
+                                    <span class="color-count">+4</span>
+                                </div>
+                                <div class="size-options">
+                                    <button class="size-btn">Matt</button>
+                                    <button class="size-btn">Gloss</button>
+                                </div>
+                                <button class="add-basket-btn">Add Sample to Basket →</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="tile-card">
+                            <div class="tile-image">
+                                <img src="/placeholder.svg?height=400&width=350" alt="Spectre Tile">
+                                <div class="tile-overlay">
+                                    <div class="tile-icons">
+                                        <span><i class="icon">👁</i> 25</span>
+                                        <span><i class="icon">❤</i> 78</span>
+                                        <span>Spectre</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile-info">
+                                <div class="tile-specs">
+                                    <span class="spec-item">📦 1 Size</span>
+                                    <span class="spec-item">🎨 5 Colors</span>
+                                    <span class="spec-item">📐 3 Finishes</span>
+                                </div>
+                                <div class="color-options">
+                                    <span class="color-dot" style="background: #f5f5f5;"></span>
+                                    <span class="color-dot" style="background: #ffd4a3;"></span>
+                                    <span class="color-dot" style="background: #c7e5ff;"></span>
+                                    <span class="color-dot" style="background: #ffb8c6;"></span>
+                                    <span class="color-count">+1</span>
+                                </div>
+                                <div class="size-options">
+                                    <button class="size-btn">Mosaics</button>
+                                    <button class="size-btn">Gloss</button>
+                                    <button class="size-btn">Matt</button>
+                                </div>
+                                <button class="add-basket-btn">Add Sample to Basket →</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="tile-card">
+                            <div class="tile-image">
+                                <img src="/placeholder.svg?height=400&width=350" alt="Agra Tile">
+                                <div class="tile-overlay">
+                                    <div class="tile-icons">
+                                        <span><i class="icon">👁</i> 28</span>
+                                        <span><i class="icon">❤</i> 30</span>
+                                        <span>Agra</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile-info">
+                                <div class="tile-specs">
+                                    <span class="spec-item">📦 1 Size</span>
+                                    <span class="spec-item">🎨 6 Colors</span>
+                                    <span class="spec-item">📐 1 Finish</span>
+                                </div>
+                                <div class="color-options">
+                                    <span class="color-dot" style="background: #f0ece4;"></span>
+                                    <span class="color-dot" style="background: #3d3d3d;"></span>
+                                    <span class="color-dot" style="background: #2a2a2a;"></span>
+                                    <span class="color-dot" style="background: #5a6a7a;"></span>
+                                    <span class="color-count">+2</span>
+                                </div>
+                                <div class="size-options">
+                                    <button class="size-btn">Matt</button>
+                                </div>
+                                <button class="add-basket-btn">Add Sample to Basket →</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="tile-card">
+                            <div class="tile-image">
+                                <img src="/placeholder.svg?height=400&width=350" alt="Arezzo Tile">
+                                <div class="tile-overlay">
+                                    <div class="tile-icons">
+                                        <span><i class="icon">👁</i> 55</span>
+                                        <span><i class="icon">❤</i> 78</span>
+                                        <span>Arezzo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile-info">
+                                <div class="tile-specs">
+                                    <span class="spec-item">📦 2 Sizes</span>
+                                    <span class="spec-item">🎨 5 Colors</span>
+                                    <span class="spec-item">📐 2 Finishes</span>
+                                </div>
+                                <div class="color-options">
+                                    <span class="color-dot" style="background: #b8b8b8;"></span>
+                                    <span class="color-dot" style="background: #e5e5e5;"></span>
+                                    <span class="color-dot" style="background: #d4d4d4;"></span>
+                                </div>
+                                <div class="size-options">
+                                    <button class="size-btn">2m</button>
+                                    <button class="size-btn">Mosaics</button>
+                                    <button class="size-btn">One</button>
+                                    <button class="size-btn">Pullet</button>
+                                </div>
+                                <button class="add-basket-btn">Add Sample to Basket →</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="tile-card">
+                            <div class="tile-image">
+                                <img src="/placeholder.svg?height=400&width=350" alt="Brx Tile">
+                                <div class="tile-overlay">
+                                    <div class="tile-icons">
+                                        <span><i class="icon">👁</i> 33</span>
+                                        <span><i class="icon">❤</i> 23</span>
+                                        <span>Brx</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile-info">
+                                <div class="tile-specs">
+                                    <span class="spec-item">📦 1 Size</span>
+                                    <span class="spec-item">🎨 10 Colors</span>
+                                    <span class="spec-item">📐 1 Finish</span>
+                                </div>
+                                <div class="color-options">
+                                    <span class="color-dot" style="background: #e8e8e8;"></span>
+                                    <span class="color-dot" style="background: #fff;"></span>
+                                    <span class="color-dot" style="background: #ffd4a3;"></span>
+                                    <span class="color-dot" style="background: #f4d9b3;"></span>
+                                    <span class="color-count">+6</span>
+                                </div>
+                                <div class="size-options">
+                                    <button class="size-btn">Gloss</button>
+                                </div>
+                                <button class="add-basket-btn">Add Sample to Basket →</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Main Header -->
-    <header id="mainHeader" class="sticky-top bg-white">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <a class="navbar-brand" href="#home">
-                    <svg viewBox="0 0 150 50" style="height: 48px; width: auto;">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#DC2626" />
-                                <stop offset="100%" stop-color="#EF4444" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="25" cy="25" r="20" fill="url(#logoGradient)" />
-                        <text x="60" y="30" fill="#111827" style="font-size: 22px; font-weight: bold; letter-spacing: 1px;">MMW</text>
-                        <text x="60" y="42" fill="#DC2626" style="font-size: 9px; letter-spacing: 2px;">MACHINE</text>
+        
+        <!-- Become a Parkside Exclusive Member Section -->
+        <section class="exclusive-member-section">
+            <div class="exclusive-member-image">
+                <div class="wooden-wall-background"></div>
+                <div class="chair-silhouette">
+                    <svg width="200" height="300" viewBox="0 0 200 300" fill="none" stroke="currentColor" stroke-width="2">
+                        <!-- Simplified wireframe chair -->
+                        <rect x="40" y="200" width="120" height="80" rx="2"/>
+                        <rect x="40" y="140" width="120" height="60" rx="2"/>
+                        <line x1="40" y1="140" x2="20" y2="200"/>
+                        <line x1="160" y1="140" x2="180" y2="200"/>
+                        <line x1="40" y1="200" x2="20" y2="280"/>
+                        <line x1="160" y1="200" x2="180" y2="280"/>
                     </svg>
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto gap-1">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#products">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#certifications">Certifications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
+                </div>
+            </div>
+            <div class="exclusive-member-container">
+                <div class="exclusive-member-text">
+                    <h2 class="exclusive-member-title">Become a Firedclay Exclusive Member</h2>
+                    <p class="exclusive-member-subtitle">Gain access to full account management, exclusive launches & events and no more form filling.</p>
                     
-                    <div class="d-flex align-items-center gap-3">
-                        <button class="btn btn-link text-dark d-none d-lg-block">
-                            <i class="bi bi-search"></i>
-                        </button>
-                        <button class="btn btn-gradient-danger">Get Quote</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section (Same as index_bootstrap.html) -->
-    <header id="home" class="hero hero-dark py-5 py-lg-6">
-      <div class="hero-bg" aria-hidden="true">
-        <video
-          class="hero-video"
-          src="https://api.wezom.com/storage/settings/rubHdoO2Di6QqoTUwYIySpbKtzgUjtaXaB3DtGlT.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          webkit-playsinline
-          x5-playsinline
-        ></video>
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="container position-relative">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-8 text-center">
-            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-4">
-              <div>
-                <h1 class="display-4 fw-extrabold text-balance text-white">
-              Precision Industrial Machinery<br/>Manufacturing Excellence
-            </h1>
-                <p class="lead text-white-50 mt-3 mb-0">
-                  Leading manufacturer of corrugation, cutting, rewinding, and paper cutting machinery for global industries.
-            </p>
-            </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <div class="hero-ui-layer">
-      <div class="container position-relative">
-        <div class="kpi-badge">
-          <div class="kpi-value">25+ <span class="arrow" aria-hidden="true">↗</span></div>
-          <div class="kpi-caption">years of experience</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Category Section with Overlap Animation -->
-    <section id="categories" class="section-padding bg-white position-relative section-overlap">
-        <div class="bg-decoration bg-decoration-1"></div>
-        <div class="bg-decoration bg-decoration-2"></div>
-        
-        <div class="container position-relative">
-            <div class="text-center mb-5 fade-in">
-                <h2 class="section-title">Product Categories</h2>
-                <p class="section-subtitle">Comprehensive range of industrial machinery designed to meet your manufacturing needs</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.1s;">
-                    <div class="category-card gradient-red">
-                        <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop');"></div>
-                        <div class="category-overlay"></div>
-                        <div class="category-icon">
-                            <i class="bi bi-gear"></i>
-                        </div>
-                        <h3 class="category-title">Corrugation Machine</h3>
-                        <p class="category-description">High-performance corrugation machinery for packaging industry</p>
-                        <a href="#products" class="category-link">
-                            Explore <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.2s;">
-                    <div class="category-card gradient-purple">
-                        <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop');"></div>
-                        <div class="category-overlay"></div>
-                        <div class="category-icon">
-                            <i class="bi bi-scissors"></i>
-                        </div>
-                        <h3 class="category-title">Cutting & Slitting Machine</h3>
-                        <p class="category-description">Precision cutting and slitting solutions for various materials</p>
-                        <a href="#products" class="category-link">
-                            Explore <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.3s;">
-                    <div class="category-card gradient-red">
-                        <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop');"></div>
-                        <div class="category-overlay"></div>
-                        <div class="category-icon">
-                            <i class="bi bi-arrow-repeat"></i>
-                        </div>
-                        <h3 class="category-title">Rewinding Machine</h3>
-                        <p class="category-description">Advanced rewinding systems for optimal roll processing</p>
-                        <a href="#products" class="category-link">
-                            Explore <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.4s;">
-                    <div class="category-card gradient-green">
-                        <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1581092160606-4d2e33ee5e7a?w=800&h=600&fit=crop');"></div>
-                        <div class="category-overlay"></div>
-                        <div class="category-icon">
-                            <i class="bi bi-file-text"></i>
-                        </div>
-                        <h3 class="category-title">Paper Cutting Machine</h3>
-                        <p class="category-description">Efficient paper cutting equipment for print and packaging</p>
-                        <a href="#products" class="category-link">
-                            Explore <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="section-padding bg-light-gradient position-relative section-overlap">
-        <div class="container">
-            <div class="text-center mb-5 fade-in">
-                <div class="section-badge mb-3">
-                    <i class="bi bi-funnel me-2"></i>
-                    Our Products
-                </div>
-                <h2 class="section-title mb-3">
-                    Premium Machinery<br>
-                    <span class="gradient-text">For Every Need</span>
-                </h2>
-                <p class="section-subtitle">Explore our comprehensive range of high-performance industrial machinery</p>
-            </div>
-            
-            <!-- Category Filter -->
-            <div class="text-center mb-5 fade-in">
-                <div class="btn-group product-filters" role="group">
-                    <button type="button" class="btn btn-filter active" data-filter="all">All</button>
-                    <button type="button" class="btn btn-filter" data-filter="corrugation">Corrugation</button>
-                    <button type="button" class="btn btn-filter" data-filter="cutting">Cutting & Slitting</button>
-                    <button type="button" class="btn btn-filter" data-filter="rewinding">Rewinding</button>
-                    <button type="button" class="btn btn-filter" data-filter="paper">Paper Cutting</button>
-                </div>
-            </div>
-            
-            <!-- Products Grid -->
-            <div class="row g-4" id="productsGrid">
-                <!-- Product 1 -->
-                <div class="col-md-6 col-lg-3 product-item" data-category="corrugation">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=400&fit=crop" alt="Single Facer Corrugation Machine">
-                            <span class="product-badge badge bg-danger">Popular</span>
-                            <div class="product-overlay">
-                                <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#productModal" data-product="0">
-                                    <i class="bi bi-eye me-2"></i>Quick View
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <span class="product-category">Corrugation</span>
-                            <h3 class="product-title">Single Facer Corrugation Machine</h3>
-                            <p class="product-description">High-speed single facer for corrugated board production</p>
-                            <a href="#" class="product-link">
-                                View Details <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="col-md-6 col-lg-3 product-item" data-category="cutting">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1581092795446-0591bb2e1c13?w=400&h=400&fit=crop" alt="Paper Slitting Machine">
-                            <span class="product-badge badge bg-success">New</span>
-                            <div class="product-overlay">
-                                <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#productModal" data-product="1">
-                                    <i class="bi bi-eye me-2"></i>Quick View
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <span class="product-category">Cutting & Slitting</span>
-                            <h3 class="product-title">Paper Slitting Machine</h3>
-                            <p class="product-description">Precision slitting for paper and flexible packaging materials</p>
-                            <a href="#" class="product-link">
-                                View Details <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="col-md-6 col-lg-3 product-item" data-category="rewinding">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=400&fit=crop" alt="Automatic Rewinding Machine">
-                            <div class="product-overlay">
-                                <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#productModal" data-product="2">
-                                    <i class="bi bi-eye me-2"></i>Quick View
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <span class="product-category">Rewinding</span>
-                            <h3 class="product-title">Automatic Rewinding Machine</h3>
-                            <p class="product-description">Fully automated rewinding system with precision control</p>
-                            <a href="#" class="product-link">
-                                View Details <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="col-md-6 col-lg-3 product-item" data-category="paper">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1581091871829-e04d19150543?w=400&h=400&fit=crop" alt="Sheet Cutting Machine">
-                            <div class="product-overlay">
-                                <button class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#productModal" data-product="3">
-                                    <i class="bi bi-eye me-2"></i>Quick View
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <span class="product-category">Paper Cutting</span>
-                            <h3 class="product-title">Sheet Cutting Machine</h3>
-                            <p class="product-description">Industrial sheet cutting with advanced automation</p>
-                            <a href="#" class="product-link">
-                                View Details <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Add more products as needed -->
-            </div>
-            
-            <div class="text-center mt-5">
-                <button class="btn btn-outline-danger btn-lg">
-                    View All Products <i class="bi bi-arrow-right ms-2"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="how-it-works" class="section-padding bg-white position-relative section-overlap">
-        <div class="process-pattern"></div>
-        
-        <div class="container position-relative">
-            <div class="text-center mb-5 fade-in">
-                <div class="process-title-badge">
-                    <h2 class="section-title process-main-title">How It Works</h2>
-                </div>
-                <p class="section-subtitle process-subtitle">Our streamlined process ensures you get the perfect machinery solution</p>
-            </div>
-            
-            <div class="row g-4 position-relative">
-                <div class="process-line d-none d-lg-block"></div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.1s;">
-                    <div class="process-card">
-                        <div class="process-number">1</div>
-                        <div class="process-number-bg">1</div>
-                        <div class="process-icon gradient-red">
-                            <i class="bi bi-search"></i>
-                        </div>
-                        <h3 class="process-title">Consultation</h3>
-                        <p class="process-description">Discuss your requirements with our expert team</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.2s;">
-                    <div class="process-card">
-                        <div class="process-number">2</div>
-                        <div class="process-number-bg">2</div>
-                        <div class="process-icon gradient-red">
-                            <i class="bi bi-file-text"></i>
-                        </div>
-                        <h3 class="process-title">Quotation</h3>
-                        <p class="process-description">Receive detailed pricing and specifications</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.3s;">
-                    <div class="process-card">
-                        <div class="process-number">3</div>
-                        <div class="process-number-bg">3</div>
-                        <div class="process-icon gradient-purple">
-                            <i class="bi bi-gear"></i>
-                        </div>
-                        <h3 class="process-title">Manufacturing</h3>
-                        <p class="process-description">Precision engineering and quality control</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.4s;">
-                    <div class="process-card">
-                        <div class="process-number">4</div>
-                        <div class="process-number-bg">4</div>
-                        <div class="process-icon gradient-green">
-                            <i class="bi bi-truck"></i>
-                        </div>
-                        <h3 class="process-title">Delivery & Setup</h3>
-                        <p class="process-description">Installation and comprehensive training</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding bg-light-gradient position-relative section-overlap">
-        <div class="about-pattern"></div>
-        
-        <div class="container position-relative">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 fade-in-left">
-                    <div class="about-image-wrapper position-relative">
-                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=600&fit=crop" alt="About MMW Machine" class="about-image">
-                        <div class="about-years-badge">
-                            <div class="display-4 mb-2">25+</div>
-                            <div>Years of Excellence</div>
-                        </div>
-                        <div class="about-decoration about-decoration-1"></div>
-                        <div class="about-decoration about-decoration-2"></div>
+                    <div class="key-benefits-section">
+                        <h3 class="key-benefits-title">5 Key Benefits</h3>
+                        <ul class="benefits-list">
+                            <li class="benefit-item">
+                                <svg class="checkmark-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                <span>Full account management, with a dedicated tile sector specialist</span>
+                            </li>
+                            <li class="benefit-item">
+                                <svg class="checkmark-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                <span>Technical support and expert advice at any point</span>
+                            </li>
+                            <li class="benefit-item">
+                                <svg class="checkmark-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                <span>No more form filling, order next day samples within a couple of clicks</span>
+                            </li>
+                            <li class="benefit-item">
+                                <svg class="checkmark-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                <span>Priority access to new product launches & exclusive events</span>
+                            </li>
+                            <li class="benefit-item">
+                                <svg class="checkmark-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                <span>Entered into our annual, all expenses paid trip to a top Italian Manufacturer</span>
+                            </li>
+                        </ul>
                     </div>
                     
-                    <div class="row g-3 mt-4">
-                        <div class="col-4">
-                            <div class="about-highlight">
-                                <i class="bi bi-bullseye"></i>
-                                <div class="small">500+ Projects</div>
-                                <div class="small text-muted">Completed</div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="about-highlight">
-                                <i class="bi bi-lightning"></i>
-                                <div class="small">25+ Years</div>
-                                <div class="small text-muted">Experience</div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="about-highlight">
-                                <i class="bi bi-award"></i>
-                                <div class="small">ISO Certified</div>
-                                <div class="small text-muted">Quality</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 fade-in-right">
-                    <div class="section-badge mb-3">About Us</div>
-                    <h2 class="section-title mb-4">
-                        Crafting Excellence Since
-                        <span class="gradient-text d-block">1999</span>
-                    </h2>
-                    <p class="lead mb-4">Monhora Mechanical Works is a leading manufacturer and supplier of high-quality industrial machinery. With years of experience in the industry, we specialize in corrugation machines, cutting and slitting equipment, rewinding machines, and paper cutting solutions.</p>
-                    <p class="mb-4">Our commitment to innovation, quality, and customer satisfaction has made us a trusted partner for businesses across various industries. We combine advanced technology with precision engineering to deliver machinery that enhances productivity and operational efficiency.</p>
-                    
-                    <div class="row g-3 mb-4">
-                        <div class="col-md-4">
-                            <div class="feature-box">
-                                <div class="feature-icon">
-                                    <i class="bi bi-award"></i>
-                                </div>
-                                <h4 class="h6 mb-2">Quality Assurance</h4>
-                                <p class="small text-muted mb-0">ISO certified manufacturing processes</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-box">
-                                <div class="feature-icon">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                                <h4 class="h6 mb-2">Expert Team</h4>
-                                <p class="small text-muted mb-0">Experienced engineers & technicians</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-box">
-                                <div class="feature-icon">
-                                    <i class="bi bi-wrench"></i>
-                                </div>
-                                <h4 class="h6 mb-2">After Sales Support</h4>
-                                <p class="small text-muted mb-0">Comprehensive maintenance services</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <ul class="benefits-list">
-                        <li><i class="bi bi-check-circle-fill me-3"></i>Custom machinery design and manufacturing</li>
-                        <li><i class="bi bi-check-circle-fill me-3"></i>On-time delivery and installation</li>
-                        <li><i class="bi bi-check-circle-fill me-3"></i>Comprehensive training and support</li>
-                        <li><i class="bi bi-check-circle-fill me-3"></i>Competitive pricing and quality assurance</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section-padding testimonials-section position-relative section-overlap">
-        <div class="testimonial-bg-decoration testimonial-decoration-1"></div>
-        <div class="testimonial-bg-decoration testimonial-decoration-2"></div>
-        
-        <div class="container position-relative">
-            <div class="text-center mb-5 fade-in">
-                <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-subtitle">Trusted by industry leaders across the globe</p>
-            </div>
-            
-            <div class="testimonial-slider-wrapper">
-                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <div class="testimonial-card">
-                                        <div class="testimonial-quote-icon">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="testimonial-rating mb-4">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        <p class="testimonial-text">"The corrugation machine from MMW has transformed our production line. The quality is exceptional and the after-sales support is outstanding."</p>
-                                        <div class="testimonial-author">
-                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces" alt="Rajesh Kumar">
-                                            <div>
-                                                <div class="author-name">Rajesh Kumar</div>
-                                                <div class="author-role">Production Manager</div>
-                                                <div class="author-company">ABC Packaging Industries</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-card">
-                                        <div class="testimonial-quote-icon">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="testimonial-rating mb-4">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        <p class="testimonial-text">"Working with MMW Machine has been a game-changer. Their machinery is reliable, efficient, and has significantly improved our productivity."</p>
-                                        <div class="testimonial-author">
-                                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces" alt="Priya Sharma">
-                                            <div>
-                                                <div class="author-name">Priya Sharma</div>
-                                                <div class="author-role">CEO</div>
-                                                <div class="author-company">Elite Paper Solutions</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <div class="testimonial-card">
-                                        <div class="testimonial-quote-icon">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="testimonial-rating mb-4">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        <p class="testimonial-text">"The level of precision and build quality in MMW machines is unmatched. They understand our industry needs perfectly."</p>
-                                        <div class="testimonial-author">
-                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=faces" alt="Amit Patel">
-                                            <div>
-                                                <div class="author-name">Amit Patel</div>
-                                                <div class="author-role">Operations Director</div>
-                                                <div class="author-company">Global Corrugators Ltd</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-card">
-                                        <div class="testimonial-quote-icon">
-                                            <i class="bi bi-quote"></i>
-                                        </div>
-                                        <div class="testimonial-rating mb-4">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        <p class="testimonial-text">"MMW's cutting-edge technology and excellent customer service have made them our preferred partner. Highly recommended for quality machinery."</p>
-                                        <div class="testimonial-author">
-                                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=faces" alt="Suresh Reddy">
-                                            <div>
-                                                <div class="author-name">Suresh Reddy</div>
-                                                <div class="author-role">General Manager</div>
-                                                <div class="author-company">Premium Packaging Co.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                        <i class="bi bi-chevron-left"></i>
+                    <button class="begin-journey-btn">
+                        <span>Begin Your Journey</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                        <i class="bi bi-chevron-right"></i>
-                    </button>
-                    
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="section-padding bg-white position-relative section-overlap">
-        <div class="cert-decoration cert-decoration-1"></div>
-        <div class="cert-decoration cert-decoration-2"></div>
+        </section>
         
-        <div class="container position-relative">
-            <div class="text-center mb-5 fade-in">
-                <div class="section-badge mb-3">
-                    <i class="bi bi-award me-2"></i>
-                    Certifications
-                </div>
-                <h2 class="section-title">Quality You Can Trust</h2>
-                <p class="section-subtitle">Our commitment to excellence is backed by international certifications and industry recognition</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.1s;">
-                    <div class="cert-card gradient-red">
-                        <div class="cert-bg"></div>
-                        <div class="cert-decoration-circle"></div>
-                        <div class="cert-icon">
-                            <i class="bi bi-award"></i>
-                        </div>
-                        <h3 class="cert-title">ISO 9001:2015</h3>
-                        <p class="cert-subtitle">Quality Management System</p>
-                        <p class="cert-description">Certified for quality management standards</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.2s;">
-                    <div class="cert-card gradient-green">
-                        <div class="cert-bg"></div>
-                        <div class="cert-decoration-circle"></div>
-                        <div class="cert-icon">
-                            <i class="bi bi-shield-check"></i>
-                        </div>
-                        <h3 class="cert-title">ISO 14001:2015</h3>
-                        <p class="cert-subtitle">Environmental Management</p>
-                        <p class="cert-description">Committed to environmental responsibility</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.3s;">
-                    <div class="cert-card gradient-red">
-                        <div class="cert-bg"></div>
-                        <div class="cert-decoration-circle"></div>
-                        <div class="cert-icon">
-                            <i class="bi bi-check-circle"></i>
-                        </div>
-                        <h3 class="cert-title">CE Certified</h3>
-                        <p class="cert-subtitle">European Standards</p>
-                        <p class="cert-description">Meeting international safety standards</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 fade-in" style="animation-delay: 0.4s;">
-                    <div class="cert-card gradient-purple">
-                        <div class="cert-bg"></div>
-                        <div class="cert-decoration-circle"></div>
-                        <div class="cert-icon">
-                            <i class="bi bi-trophy"></i>
-                        </div>
-                        <h3 class="cert-title">Quality Excellence</h3>
-                        <p class="cert-subtitle">Industry Recognition</p>
-                        <p class="cert-description">Award-winning manufacturing practices</p>
-                    </div>
+        <!-- Meet Parkside Section -->
+        <section class="meet-parkside-section">
+            <div class="container-fluid">
+                <div class="meet-parkside-content">
+                    <p class="meet-parkside-breadcrumb">/ Meet Firedclay</p>
+                    <p class="meet-parkside-text">At Firedclay we're committed to quality, innovation and genuine partnerships. We work closely with architects, designers and contractors to bring ambitious visions to life.</p>
                 </div>
             </div>
-            
-            <div class="text-center mt-5">
-                <div class="trust-badge fade-in">
-                    <i class="bi bi-trophy me-3"></i>
-                    Trusted by 500+ Companies Worldwide
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Web Offset Printing Machines Section -->
-    <section id="printing-machines" class="section-padding bg-light-gradient position-relative section-overlap">
-        <div class="printing-machines-pattern"></div>
+        </section>
         
-        <div class="container position-relative">
-            <div class="text-center mb-5 fade-in">
-                <h2 class="section-title mb-3">
-                    Web Offset <span class="gradient-text">Printing</span> Machines
-                </h2>
-                <p class="section-subtitle">
-                    Web offset presses and Web offset machines are used to print on both sides of roll (web).
-                </p>
-            </div>
-            
-            <div class="row g-4">
-                <!-- Product Card 1: Newspaper Printing Machine -->
-                <div class="col-md-6 col-lg-4 fade-in-up" style="animation-delay: 0.1s;">
-                    <div class="printing-machine-card">
-                        <div class="printing-machine-image">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop" alt="Newspaper Printing Machine">
-                        </div>
-                        <div class="printing-machine-content">
-                            <h3 class="printing-machine-title">Newspaper Printing Machine</h3>
-                            <p class="printing-machine-description">
-                                Newspaper printing machines are focussed on serving varying printing needs of newspaper houses with precision and efficiency.
-                            </p>
-                            <a href="#" class="printing-machine-link">Read More</a>
+        <!-- About Parkside Split Section -->
+        <section class="about-parkside-split-section">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <!-- Left Side - Text Content -->
+                    <div class="col-lg-6 about-parkside-text-col">
+                        <div class="about-parkside-text-content">
+                            <p class="about-parkside-text">For over 40 years, Firedclay has supported the architecture and design community with expert tile knowledge and a commitment to service that goes beyond products.</p>
+                            <p class="about-parkside-text">We've partnered with industry-leading architects, designers, and developers to deliver projects across hospitality, residential, and commercial sectors. From boutique hotels to large-scale developments, our collaborative approach and technical expertise ensure we meet both creative and practical demands — every time.</p>
+                            <button class="learn-more-btn">
+                                <span>Learn More</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M7 7h10v10"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Product Card 2: Textbook Printing Machine -->
-                <div class="col-md-6 col-lg-4 fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="printing-machine-card">
-                        <div class="printing-machine-image">
-                            <img src="https://images.unsplash.com/photo-1581092795446-0591bb2e1c13?w=600&h=400&fit=crop" alt="Textbook Printing Machine">
-                        </div>
-                        <div class="printing-machine-content">
-                            <h3 class="printing-machine-title">Textbook Printing Machine</h3>
-                            <p class="printing-machine-description">
-                                Perfect solution for printers who want to print textbooks in high volumes with superior quality and reliability.
-                            </p>
-                            <a href="#" class="printing-machine-link">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product Card 3: Newspaper Printing Machine -->
-                <div class="col-md-6 col-lg-4 fade-in-up" style="animation-delay: 0.3s;">
-                    <div class="printing-machine-card">
-                        <div class="printing-machine-image">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop" alt="Newspaper Printing Machine">
-                        </div>
-                        <div class="printing-machine-content">
-                            <h3 class="printing-machine-title">Newspaper Printing Machine</h3>
-                            <p class="printing-machine-description">
-                                Newspaper printing machines are focussed on serving varying printing needs of newspaper houses with precision and efficiency.
-                            </p>
-                            <a href="#" class="printing-machine-link">Read More</a>
+                    
+                    <!-- Right Side - Interior Design Image -->
+                    <div class="col-lg-6 about-parkside-image-col">
+                        <div class="about-parkside-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80" alt="Firedclay Interior Design" class="about-parkside-image" />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Fixed Social Media Sidebar -->
-    <div class="social-media-sidebar">
-        <a href="#" class="social-icon" aria-label="Facebook" target="_blank">
-            <i class="bi bi-facebook"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="Instagram" target="_blank">
-            <i class="bi bi-instagram"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank">
-            <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="#" class="social-icon" aria-label="YouTube" target="_blank">
-            <i class="bi bi-youtube"></i>
-        </a>
-    </div>
-
-    <!-- FAQ Section -->
-    <section class="section-padding bg-white section-overlap" style="overflow: visible !important;">
-        <div class="container" style="overflow: visible !important;">
-            <div class="text-center mb-5 fade-in">
-                <div class="section-badge mb-3">
-                    <i class="bi bi-question-circle me-2"></i>
-                    FAQ
-                </div>
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common questions about our machinery and services</p>
-            </div>
-            
-            <div class="row g-4" style="overflow: visible !important;">
-                <div class="col-md-6" style="overflow: visible !important;">
-                    <div class="accordion faq-accordion" id="faqAccordion" style="overflow: visible !important;">
-                        <div class="accordion-item fade-in">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    What types of machinery do you manufacture?
-                                </button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We specialize in corrugation machines, cutting & slitting machines, rewinding machines, and paper cutting equipment. Each machine is designed with precision engineering to meet international quality standards.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item fade-in">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Do you provide installation and training services?
-                                </button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Yes, we provide complete installation services along with comprehensive training for your team. Our technicians ensure proper setup and train your staff on operation, maintenance, and safety procedures.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item fade-in">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                    What is the warranty period for your machines?
-                                </button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    All our machines come with a standard 12-month warranty covering manufacturing defects. Extended warranty options are also available. We also offer annual maintenance contracts for long-term support.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6" style="overflow: visible !important;">
-                    <div class="accordion faq-accordion" id="faqAccordion2" style="overflow: visible !important;">
-                        <div class="accordion-item fade-in">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    Can you customize machines according to our requirements?
-                                </button>
-                            </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">
-                                    Absolutely! We understand that every business has unique needs. Our engineering team can customize machines based on your specific requirements, production capacity, and space constraints.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item fade-in">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                    What is the typical delivery time for machinery?
-                                </button>
-                            </h2>
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">
-                                    Standard machines are typically delivered within 6-8 weeks. Custom-built machines may take 10-12 weeks depending on specifications. We ensure timely delivery with regular progress updates.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item fade-in">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
-                                    Do you offer after-sales support and spare parts?
-                                </button>
-                            </h2>
-                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
-                                <div class="accordion-body">
-                                    Yes, we provide comprehensive after-sales support including spare parts, maintenance services, and technical assistance. Our support team is available to ensure minimal downtime and optimal performance.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light-gradient position-relative section-overlap">
-        <div class="contact-pattern"></div>
+        </section>
         
-        <div class="container position-relative">
-            <div class="text-center mb-5 fade-in">
-                <div class="section-badge mb-3">
-                    <i class="bi bi-send me-2"></i>
-                    Contact Us
-                </div>
-                <h2 class="section-title">Let's Start a Conversation</h2>
-                <p class="section-subtitle">Have a question or need a quote? We're here to help you find the perfect machinery solution</p>
-            </div>
-            
-            <div class="row g-4">
-                <!-- Contact Info -->
-                <div class="col-lg-4">
-                    <div class="contact-info-card gradient-red fade-in" style="animation-delay: 0.1s;">
-                        <div class="contact-info-icon">
-                            <i class="bi bi-telephone"></i>
+        <!-- Our Commitment to Sustainability Section -->
+        <section class="sustainability-section">
+            <!-- Top Section: Title, Description, Button -->
+            <div class="sustainability-top-section">
+                <div class="container-fluid">
+                    <div class="sustainability-top-content">
+                        <div class="sustainability-top-left">
+                            <p class="sustainability-breadcrumb">/ Our commitment to sustainability</p>
+                            <h2 class="sustainability-title">Our commitment to sustainability</h2>
                         </div>
-                        <h3 class="h5 mb-3">Phone</h3>
-                        <p class="mb-1">+91 1234567890</p>
-                        <p class="mb-0">+91 0987654321</p>
-                    </div>
-                    
-                    <div class="contact-info-card gradient-red fade-in" style="animation-delay: 0.2s;">
-                        <div class="contact-info-icon">
-                            <i class="bi bi-envelope"></i>
+                        <div class="sustainability-top-middle">
+                            <p class="sustainability-description">We're focused on delivering sustainable products, eco-conscious packaging, and green manufacturing—helping you build with responsibility at every step.</p>
                         </div>
-                        <h3 class="h5 mb-3">Email</h3>
-                        <p class="mb-1">info@mmwmachine.com</p>
-                        <p class="mb-0">sales@mmwmachine.com</p>
-                    </div>
-                    
-                    <div class="contact-info-card gradient-purple fade-in" style="animation-delay: 0.3s;">
-                        <div class="contact-info-icon">
-                            <i class="bi bi-geo-alt"></i>
+                        <div class="sustainability-top-right">
+                            <button class="sustainability-commitment-btn">
+                                <span>Our Sustainability Commitment</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M7 7h10v10"/>
+                                </svg>
+                            </button>
                         </div>
-                        <h3 class="h5 mb-3">Location</h3>
-                        <p class="mb-0">Industrial Area, Phase 2<br>City, State - 123456<br>India</p>
-                    </div>
-                    
-                </div>
-                
-                <!-- Contact Form -->
-                <div class="col-lg-8 fade-in">
-                    <div class="contact-form-card">
-                        <form id="contactForm">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <label class="form-label">Name *</label>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Your name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Email *</label>
-                                    <input type="email" class="form-control form-control-lg" placeholder="your@email.com" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Phone</label>
-                                    <input type="tel" class="form-control form-control-lg" placeholder="+91 1234567890">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Subject *</label>
-                                    <input type="text" class="form-control form-control-lg" placeholder="How can we help?" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label">Message *</label>
-                                    <textarea class="form-control" rows="6" placeholder="Tell us about your requirements..." required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-gradient-danger btn-lg w-100">
-                                        <i class="bi bi-send me-2"></i>Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
             
-            <!-- Global Presence Section -->
-            <div class="global-presence-section mt-5 fade-in">
-                <div class="global-presence-container">
-                    <div class="row g-4 align-items-center">
-                        <!-- Left Side: Countries Grid -->
-                        <div class="col-lg-5">
-                            <div class="global-presence-header mb-4">
-                                <div class="india-flag mb-3">
-                                    <div class="flag-india"></div>
-                                </div>
-                                <h2 class="global-presence-title">Global Presence</h2>
-                                <p class="global-presence-subtitle">17 Countries and more</p>
-                            </div>
-                            
-                            <div class="countries-grid">
-                                <div class="country-item fade-in-up" style="animation-delay: 0.1s;">
-                                    <div class="country-flag flag-usa"></div>
-                                    <span class="country-name">USA</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.15s;">
-                                    <div class="country-flag flag-newzealand"></div>
-                                    <span class="country-name">New Zealand</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.2s;">
-                                    <div class="country-flag flag-uae"></div>
-                                    <span class="country-name">UAE</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.25s;">
-                                    <div class="country-flag flag-iraq"></div>
-                                    <span class="country-name">Iraq</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.3s;">
-                                    <div class="country-flag flag-congo"></div>
-                                    <span class="country-name">Congo</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.35s;">
-                                    <div class="country-flag flag-tanzania"></div>
-                                    <span class="country-name">Tanzania</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.4s;">
-                                    <div class="country-flag flag-portugal"></div>
-                                    <span class="country-name">Portugal</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.45s;">
-                                    <div class="country-flag flag-srilanka"></div>
-                                    <span class="country-name">Sri Lanka</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.5s;">
-                                    <div class="country-flag flag-egypt"></div>
-                                    <span class="country-name">Egypt</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.55s;">
-                                    <div class="country-flag flag-mexico"></div>
-                                    <span class="country-name">Mexico</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.6s;">
-                                    <div class="country-flag flag-nigeria"></div>
-                                    <span class="country-name">Nigeria</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.65s;">
-                                    <div class="country-flag flag-colombia"></div>
-                                    <span class="country-name">Columbia</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.7s;">
-                                    <div class="country-flag flag-bangladesh"></div>
-                                    <span class="country-name">Bangladesh</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.75s;">
-                                    <div class="country-flag flag-nepal"></div>
-                                    <span class="country-name">Nepal</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.8s;">
-                                    <div class="country-flag flag-canada"></div>
-                                    <span class="country-name">Canada</span>
-                                </div>
-                                <div class="country-item fade-in-up" style="animation-delay: 0.85s;">
-                                    <div class="country-flag flag-ivorycoast"></div>
-                                    <span class="country-name">Ivory Coast</span>
-                                </div>
-                            </div>
+            <!-- Bottom Section: Image and Items -->
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <!-- Left Side - Image -->
+                    <div class="col-lg-6 sustainability-image-col">
+                        <div class="sustainability-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80" alt="Sustainability Materials" class="sustainability-image" />
                         </div>
-                        
-                        <!-- Right Side: World Map -->
-                        <div class="col-lg-7">
-                            <div class="world-map-container fade-in" style="animation-delay: 0.3s;">
-                                <div class="world-map-dotted">
-                                    <svg viewBox="0 0 800 900" class="world-map-svg india-map-svg" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <pattern id="indiaDots" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
-                                                <circle cx="7.5" cy="7.5" r="1.5" fill="#4B5563" opacity="0.6"/>
-                                            </pattern>
-                                        </defs>
-                                        <!-- India Map Outline with dots -->
-                                        <g class="india-continents">
-                                            <!-- Simplified India map shape -->
-                                            <path d="M350 50 Q380 60, 400 80 L420 120 Q440 150, 460 200 L480 280 Q490 340, 480 400 L460 480 Q450 540, 430 580 L400 620 Q370 640, 350 650 L320 640 Q300 620, 290 580 L280 520 Q270 480, 260 440 L250 380 Q240 320, 230 260 L220 200 Q210 150, 220 120 L240 80 Q270 60, 350 50 Z" fill="url(#indiaDots)" opacity="0.7"/>
-                                            <!-- More detailed India outline -->
-                                            <path d="M340 70 L360 100 L370 140 L375 180 L380 220 L382 260 L380 300 L375 340 L365 380 L355 420 L345 460 L335 500 L325 540 L315 580 L300 600 L280 610 L260 600 L250 570 L245 530 L240 490 L235 450 L230 410 L225 370 L220 330 L215 290 L210 250 L215 210 L225 170 L240 130 L260 100 L280 80 L300 75 L320 70 Z" fill="url(#indiaDots)" opacity="0.6"/>
-                                            <!-- Additional dots for detail -->
-                                            <circle cx="380" cy="280" r="1.5" fill="#4B5563" opacity="0.5"/>
-                                            <circle cx="420" cy="320" r="1.5" fill="#4B5563" opacity="0.5"/>
-                                            <circle cx="300" cy="400" r="1.5" fill="#4B5563" opacity="0.5"/>
-                                            <circle cx="360" cy="480" r="1.5" fill="#4B5563" opacity="0.5"/>
-                                            <circle cx="320" cy="350" r="1.5" fill="#4B5563" opacity="0.5"/>
-                                            <circle cx="400" cy="450" r="1.5" fill="#4B5563" opacity="0.5"/>
-                                            <circle cx="280" cy="280" r="1.5" fill="#4B5563" opacity="0.5"/>
-                                            <circle cx="340" cy="520" r="1.5" fill="#4B5563" opacity="0.5"/>
-                                            <!-- State boundaries (simplified) -->
-                                            <path d="M350 180 L370 200 L375 240 L370 280" stroke="#4B5563" stroke-width="0.5" fill="none" opacity="0.3"/>
-                                            <path d="M300 250 L330 270 L340 310 L335 350" stroke="#4B5563" stroke-width="0.5" fill="none" opacity="0.3"/>
-                                        </g>
+                    </div>
+                    
+                    <!-- Right Side - Items -->
+                    <div class="col-lg-6 sustainability-content-col">
+                        <div class="sustainability-content">
+                            <div class="sustainability-items">
+                                <!-- Item 1: Alusid Tiles -->
+                                <div class="sustainability-item">
+                                    <div class="sustainability-item-content">
+                                        <div class="sustainability-item-header">
+                                            <div class="sustainability-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                                    <rect x="7" y="7" width="10" height="10" rx="1"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="sustainability-item-title">Alusid Tiles</h3>
+                                        </div>
+                                        <p class="sustainability-item-text">Exclusive UK partnership, Firedclay and Alusid are leading the tile industry through a shared commitment to environmental responsibility and sustainable innovation with tiles that have up to 98% recycled content.</p>
+                                    </div>
+                                    <svg class="sustainability-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M7 7h10v10"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Item 2: Tiles with Recycled Content -->
+                                <div class="sustainability-item">
+                                    <div class="sustainability-item-content">
+                                        <div class="sustainability-item-header">
+                                            <div class="sustainability-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                                                    <path d="M12 6v6l4 2"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="sustainability-item-title">Tiles with Recycled Content</h3>
+                                        </div>
+                                        <p class="sustainability-item-text">View our range of tiles made with 50% recycled content.</p>
+                                    </div>
+                                    <svg class="sustainability-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M7 7h10v10"/>
+                                    </svg>
+                                </div>
+                                
+                                <!-- Item 3: EPD library -->
+                                <div class="sustainability-item">
+                                    <div class="sustainability-item-content">
+                                        <div class="sustainability-item-header">
+                                            <div class="sustainability-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                                    <rect x="7" y="7" width="10" height="10" rx="1"/>
+                                                </svg>
+                                            </div>
+                                            <h3 class="sustainability-item-title">EPD library</h3>
+                                        </div>
+                                        <p class="sustainability-item-text">Manage your moodboard, or check out our EPD library</p>
+                                    </div>
+                                    <svg class="sustainability-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M7 7h10v10"/>
                                     </svg>
                                 </div>
                             </div>
@@ -1100,321 +690,338 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        
+        <!-- Our Achievements Section -->
+        <section class="achievements-section">
+            <div class="container-fluid">
+                <div class="achievements-content">
+                    <p class="achievements-breadcrumb">/ Our Achievements</p>
+                    <h2 class="achievements-title">We not only design elegant tiles, but we also innovate and contribute to the world.</h2>
+                    
+                    <!-- Awards Swiper Slider -->
+                    <div class="swiper achievements-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Award 1: Blueprint Award -->
+                            <div class="swiper-slide">
+                                <div class="award-item">
+                                    <div class="award-logo">
+                                        <div class="award-logo-placeholder blueprint-award">
+                                            <div class="blueprint-top">BLUEPRINT</div>
+                                            <div class="blueprint-bottom">AWARDS</div>
+                                        </div>
+                                    </div>
+                                    <p class="award-name">Blueprint Award</p>
+                                    <p class="award-year">2019</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Award 2: FX 2019 -->
+                            <div class="swiper-slide">
+                                <div class="award-item">
+                                    <div class="award-logo">
+                                        <div class="award-logo-placeholder fx-award">
+                                            <div class="fx-circle">
+                                                <div class="fx-text">INTERIOR DESIGN AWARDS</div>
+                                                <div class="fx-logo">FX</div>
+                                            </div>
+                                            <div class="fx-year">2019</div>
+                                        </div>
+                                    </div>
+                                    <p class="award-name">FX</p>
+                                    <p class="award-year">2019</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Award 3: Hotel Designs -->
+                            <div class="swiper-slide">
+                                <div class="award-item">
+                                    <div class="award-logo">
+                                        <div class="award-logo-placeholder hotel-award">
+                                            <div class="hotel-top">HOTEL DESIGNS.</div>
+                                            <div class="hotel-bottom">THE BRIT LIST 2020 WINNER</div>
+                                        </div>
+                                    </div>
+                                    <p class="award-name">Hotel Designs</p>
+                                    <p class="award-year">2020</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Award 4: North Mixology -->
+                            <div class="swiper-slide">
+                                <div class="award-item">
+                                    <div class="award-logo">
+                                        <div class="award-logo-placeholder mixology-award">
+                                            <div class="mixology-top">mixology</div>
+                                            <div class="mixology-middle">WINNER</div>
+                                            <div class="mixology-bottom">2019</div>
+                                        </div>
+                                    </div>
+                                    <p class="award-name">North Mixology</p>
+                                    <p class="award-year">2019</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Award 5: The Tile Association 2020 -->
+                            <div class="swiper-slide">
+                                <div class="award-item">
+                                    <div class="award-logo">
+                                        <div class="award-logo-placeholder tta-award">
+                                            <div class="tta-medal">
+                                                <div class="tta-circle">THE TILE ASSOCIATION</div>
+                                                <div class="tta-tiles">⊞⊞⊞</div>
+                                            </div>
+                                            <div class="tta-text">AWARD WINNER 2020</div>
+                                        </div>
+                                    </div>
+                                    <p class="award-name">The Tile Association</p>
+                                    <p class="award-year">2020</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Award 6: FX 2020 -->
+                            <div class="swiper-slide">
+                                <div class="award-item">
+                                    <div class="award-logo">
+                                        <div class="award-logo-placeholder fx-award">
+                                            <div class="fx-circle">
+                                                <div class="fx-text">INTERIOR DESIGN AWARDS</div>
+                                                <div class="fx-logo">FX</div>
+                                            </div>
+                                            <div class="fx-year">SHORTLIST 2020</div>
+                                        </div>
+                                    </div>
+                                    <p class="award-name">FX</p>
+                                    <p class="award-year">2020</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Award 7: SBID Product Design -->
+                            <div class="swiper-slide">
+                                <div class="award-item">
+                                    <div class="award-logo">
+                                        <div class="award-logo-placeholder sbid-award">
+                                            <div class="sbid-content">
+                                                <div class="sbid-d">D</div>
+                                                <div class="sbid-text">
+                                                    <div>SBID PRODUCT</div>
+                                                    <div>DESIGN</div>
+                                                    <div>2020 AWARDS.</div>
+                                                </div>
+                                            </div>
+                                            <div class="sbid-finalist">FINALIST</div>
+                                        </div>
+                                    </div>
+                                    <p class="award-name">SBID Product Design</p>
+                                    <p class="award-year">2020</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Award 8: TTA Award Finalist -->
+                            <div class="swiper-slide">
+                                <div class="award-item">
+                                    <div class="award-logo">
+                                        <div class="award-logo-placeholder tta-award">
+                                            <div class="tta-medal">
+                                                <div class="tta-circle">THE TILE ASSOCIATION</div>
+                                                <div class="tta-tiles">⊞⊞⊞</div>
+                                            </div>
+                                            <div class="tta-text">AWARD FINALIST 2020</div>
+                                        </div>
+                                    </div>
+                                    <p class="award-name">TTA Award</p>
+                                    <p class="award-year">2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
-
-    <!-- Our Prestigious Clients Section -->
-    <section class="section-padding bg-white position-relative section-overlap">
-        <div class="container position-relative">
-            <div class="text-center mb-5 fade-in">
-                <h2 class="section-title mb-3">
-                    Our <span class="gradient-text">Prestigious</span> Clients
-                </h2>
-                <div class="client-title-divider"></div>
+        
+    <!-- Become a Parkside Expert Section -->
+    <section class="parkside-expert-section">
+        <div class="parkside-expert-background">
+            <div class="fluted-background"></div>
+            <div class="chair-silhouette">
+                <svg width="200" height="300" viewBox="0 0 200 300" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="40" y="200" width="120" height="80" rx="2"/>
+                    <rect x="40" y="140" width="120" height="60" rx="2"/>
+                    <line x1="40" y1="140" x2="20" y2="200"/>
+                    <line x1="160" y1="140" x2="180" y2="200"/>
+                    <line x1="40" y1="200" x2="20" y2="280"/>
+                    <line x1="160" y1="200" x2="180" y2="280"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="parkside-expert-container">
+            <div class="rotating-headline-wrapper">
+                <div class="marquee-container">
+                    <div class="marquee-content">
+                        <span class="marquee-text">BECOME A FIREDCLAY EXPERT</span>
+                        <span class="marquee-text">JOIN THE EXCLUSIVE COMMUNITY</span>
+                        <span class="marquee-text">ELEVATE YOUR DESIGN VISION</span>
+                        <span class="marquee-text">BECOME A FIREDCLAY EXPERT</span>
+                        <span class="marquee-text">JOIN THE EXCLUSIVE COMMUNITY</span>
+                        <span class="marquee-text">ELEVATE YOUR DESIGN VISION</span>
+                    </div>
+                </div>
             </div>
             
-            <!-- Auto-Scrolling Clients Slider -->
-            <div class="clients-slider-wrapper">
-                <div class="clients-slider" id="clientsSlider">
-                    <!-- Client Logo Items (Duplicated for seamless loop) -->
-                    <div class="client-logo-item">
-                        <div class="client-logo">DJS PRINTERS PVT. LTD.</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Virat Ecobags Pvt. Ltd.</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">CANPAC PACKAGING COMMUNICATES</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">CARRY WELL PACKAGING Pvt. Ltd.</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">COLOR BAGS INDIA</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Skyline OFFSET</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">K.K. PAPER PRODUCTS</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Orient prees limited</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">SGM</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Shree Paper Udyog</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Puja Polymers</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Cistro INC</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Vignesh Paper Company</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">UNIPACK</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">MICROPACK SYSTEMS</div>
+            <div class="content-separator"></div>
+            
+            <div class="parkside-expert-content">
+                <div class="vision-section">
+                    <h3 class="vision-title">Start your Vision</h3>
+                    <p class="vision-description">Gain access to full account management, exclusive launches & events and no more form filling.</p>
+                </div>
+                
+                <div class="journey-section">
+                    <button class="begin-journey-btn-expert">
+                        <span>Begin Your Journey</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Left Section: Logo, Tagline, Social Media -->
+                <div class="footer-left">
+                    <div class="footer-logo-section">
+                        <h2 class="footer-logo">FIREDCLAY</h2>
+                        <p class="footer-tagline">ARCHITECTURAL TILES</p>
+                        <p class="footer-description">The commercial tile specialist who understands your technical specs, design vision, and sustainability targets.</p>
                     </div>
                     
-                    <!-- Duplicate items for seamless loop -->
-                    <div class="client-logo-item">
-                        <div class="client-logo">DJS PRINTERS PVT. LTD.</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Virat Ecobags Pvt. Ltd.</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">CANPAC PACKAGING COMMUNICATES</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">CARRY WELL PACKAGING Pvt. Ltd.</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">COLOR BAGS INDIA</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Skyline OFFSET</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">K.K. PAPER PRODUCTS</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Orient prees limited</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">SGM</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Shree Paper Udyog</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Puja Polymers</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Cistro INC</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">Vignesh Paper Company</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">UNIPACK</div>
-                    </div>
-                    <div class="client-logo-item">
-                        <div class="client-logo">MICROPACK SYSTEMS</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer position-relative overflow-hidden section-overlap">
-        <div class="footer-pattern"></div>
-        
-        <div class="container position-relative pt-5 pb-4">
-            <div class="row g-4 mb-5">
-                <!-- Company Info -->
-                <div class="col-lg-4 fade-in">
-                    <div class="mb-4">
-                        <svg viewBox="0 0 150 50" style="height: 48px; width: auto;">
-                            <defs>
-                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#DC2626" />
-                                    <stop offset="100%" stop-color="#EF4444" />
-                                </linearGradient>
-                            </defs>
-                            <circle cx="25" cy="25" r="20" fill="url(#footerLogoGradient)" />
-                            <text x="60" y="30" fill="white" style="font-size: 22px; font-weight: bold; letter-spacing: 1px;">MMW</text>
-                            <text x="60" y="42" fill="#EF4444" style="font-size: 9px; letter-spacing: 2px;">MACHINE</text>
-                        </svg>
-                    </div>
-                    <p class="text-muted mb-4">Leading manufacturer of industrial machinery, delivering quality and innovation since 1999. Your trusted partner for packaging equipment.</p>
-                    <div class="footer-contact">
-                        <a href="tel:+911234567890" class="d-flex align-items-center gap-3 mb-3 text-decoration-none">
-                            <div class="footer-contact-icon">
-                                <i class="bi bi-telephone"></i>
-                            </div>
-                            <span class="text-light">+91 1234567890</span>
-                        </a>
-                        <a href="mailto:info@mmwmachine.com" class="d-flex align-items-center gap-3 mb-3 text-decoration-none">
-                            <div class="footer-contact-icon">
-                                <i class="bi bi-envelope"></i>
-                            </div>
-                            <span class="text-light">info@mmwmachine.com</span>
-                        </a>
-                        <div class="d-flex align-items-start gap-3">
-                            <div class="footer-contact-icon">
-                                <i class="bi bi-geo-alt"></i>
-                            </div>
-                            <span class="text-light">Industrial Area, Phase 2<br>City, State - 123456, India</span>
+                    <div class="footer-social-section">
+                        <h3 class="footer-social-title">Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Pinterest">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.17 2.58 7.73 6.24 9.15-.09-.79-.17-2.01.03-2.87.19-.84 1.24-5.7 1.24-5.7s-.31-.62-.31-1.54c0-1.44.84-2.52 1.88-2.52.89 0 1.32.66 1.32 1.46 0 .89-.57 2.22-.86 3.45-.24 1.03.52 1.87 1.53 1.87 1.84 0 3.25-1.94 3.25-4.74 0-2.48-1.66-4.21-4.03-4.21-2.74 0-4.35 2.06-4.35 4.19 0 .82.32 1.7.72 2.18.08.1.09.18.07.28-.07.3-.23.95-.26 1.08-.04.17-.14.21-.33.13-1.24-.58-2.02-2.4-2.02-3.86 0-3.15 2.29-6.05 6.6-6.05 3.47 0 6.16 2.53 6.16 5.9 0 3.44-2.17 6.21-5.18 6.21-1.01 0-1.97-.53-2.3-1.23l-.63 2.4c-.23.89-.85 2.01-1.27 2.69C9.11 21.99 10.5 22.5 12 22.5c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quick Links -->
-                <div class="col-6 col-lg-2 fade-in" style="animation-delay: 0.1s;">
-                    <h5 class="text-white mb-4">Company</h5>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
+                <!-- Middle Left: Contact and Studios -->
+                <div class="footer-middle-left">
+                    <div class="footer-contact-section">
+                        <h3 class="footer-section-title">Get in touch</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon email-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="4"/>
+                                    <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+                                </svg>
+                            </div>
+                            <a href="mailto:supportteam@firedclay.co.uk" class="contact-link">supportteam@firedclay.co.uk</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon phone-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <a href="tel:01162762532" class="contact-link">0116 276 2532</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-studios-section">
+                        <h3 class="footer-section-title">Our Design Studios</h3>
+                        <ul class="studios-list">
+                            <li><a href="#">London - Material Source Studio</a></li>
+                            <li><a href="#">Leicester - Design Studio</a></li>
+                            <li><a href="#">Manchester - Material Source Studio</a></li>
+                            <li><a href="#">Glasgow - Material Source Studio</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Middle Right: Navigation -->
+                <div class="footer-middle-right">
+                    <h3 class="footer-section-title">Navigation</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">News</a></li>
                         <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Right Section: Other Information -->
+                <div class="footer-right">
+                    <h3 class="footer-section-title">Other Information</h3>
+                    <ul class="footer-info-list">
+                        <li><a href="#">Material Source</a></li>
+                        <li><a href="#">Sustainability</a></li>
                         <li><a href="#">Careers</a></li>
-                        <li><a href="#">News & Blog</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-6 col-lg-2 fade-in" style="animation-delay: 0.2s;">
-                    <h5 class="text-white mb-4">Products</h5>
-                    <ul class="footer-links">
-                        <li><a href="#products">Corrugation Machines</a></li>
-                        <li><a href="#products">Cutting & Slitting</a></li>
-                        <li><a href="#products">Rewinding Machines</a></li>
-                        <li><a href="#products">Paper Cutting</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-6 col-lg-2 fade-in" style="animation-delay: 0.3s;">
-                    <h5 class="text-white mb-4">Support</h5>
-                    <ul class="footer-links">
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Technical Support</a></li>
-                        <li><a href="#">Warranty Info</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-6 col-lg-2 fade-in" style="animation-delay: 0.4s;">
-                    <h5 class="text-white mb-4">Legal</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Awards</a></li>
+                        <li><a href="#">Technical Services</a></li>
+                        <li><a href="#">40 Years</a></li>
                         <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
             
-            <!-- Footer Bottom -->
-            <div class="border-top border-secondary pt-4">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <p class="text-muted small mb-0">&copy; 2024 MMW Machine. All rights reserved. Crafted with excellence.</p>
+            <!-- Footer Bottom: Copyright -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
                     </div>
-                    <div class="col-md-6">
-                        <div class="footer-social">
-                            <a href="#"><i class="bi bi-facebook"></i></a>
-                            <a href="#"><i class="bi bi-twitter"></i></a>
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
+                    <p class="footer-copyright">Copyright © Firedclay, Inc. All Rights Reserved. Website by Imaginaire</p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- WhatsApp Chat Widget -->
-    <div id="whatsappWidget" class="whatsapp-widget">
-        <button class="whatsapp-button" id="whatsappButton">
-            <i class="bi bi-whatsapp"></i>
-            <span class="whatsapp-badge"></span>
-            <div class="whatsapp-tooltip">Chat with us</div>
-        </button>
-        
-        <div class="whatsapp-chat" id="whatsappChat">
-            <div class="whatsapp-header">
-                <div class="d-flex align-items-center gap-3">
-                    <div class="whatsapp-avatar">
-                        <i class="bi bi-whatsapp"></i>
-                    </div>
-                    <div>
-                        <div class="text-white">Chat with us</div>
-                        <div class="text-success small d-flex align-items-center gap-1">
-                            <span class="online-dot"></span>Online
-                        </div>
-                    </div>
-                </div>
-                <button class="btn-close btn-close-white" id="closeChat"></button>
-            </div>
-            <div class="whatsapp-body">
-                <div class="whatsapp-message">
-                    <p>Hello! 👋 How can we help you today?</p>
-                    <p class="small text-muted mb-0">MMW Machine Team</p>
-                </div>
-                <div class="whatsapp-quick-replies">
-                    <button class="quick-reply" data-message="I need a quote for corrugation machine">Get a Quote</button>
-                    <button class="quick-reply" data-message="Tell me about your products">Product Info</button>
-                    <button class="quick-reply" data-message="I need technical support">Support</button>
-                </div>
-            </div>
-            <div class="whatsapp-footer">
-                <textarea class="form-control" placeholder="Type your message..." rows="2" id="chatMessage"></textarea>
-                <button class="btn btn-success" id="sendMessage">
-                    <i class="bi bi-send"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
-        <i class="bi bi-arrow-up"></i>
-    </button>
-
-    <!-- Product Quick View Modal -->
-    <div class="modal fade" id="productModal" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalProductTitle">Product Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <img id="modalProductImage" src="" alt="" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-6">
-                            <span class="badge bg-danger mb-3" id="modalProductCategory">Category</span>
-                            <p id="modalProductDescription">Product description goes here.</p>
-                            <h6 class="mb-3">Key Features:</h6>
-                            <ul id="modalProductFeatures" class="mb-4">
-                                <!-- Features will be populated by JS -->
-                            </ul>
-                            <div class="d-flex gap-3">
-                                <button class="btn btn-danger flex-fill">Request Quote</button>
-                                <button class="btn btn-outline-danger">Download Specs</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Toast Notification Container -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert">
-            <div class="d-flex">
-                <div class="toast-body">
-                    <i class="bi bi-check-circle me-2"></i>
-                    <span id="toastMessage">Success!</span>
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-            </div>
-        </div>
-    </div>
-
+    
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
+
