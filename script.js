@@ -1,6 +1,6 @@
 // Load navbar
 function loadNavbar() {
-    fetch('include/navbar.html')
+    fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;
@@ -11,16 +11,10 @@ function loadNavbar() {
         });
 }
 
-// Load footer
+// Load footer (not needed as footer is already in HTML, but keeping for compatibility)
 function loadFooter() {
-    fetch('include/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-container').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading footer:', error);
-        });
+    // Footer is already in the HTML, so this function is not needed
+    // But keeping it for compatibility if needed in future
 }
 
 // Initialize dropdown hover functionality
@@ -102,7 +96,7 @@ function initHeroSwiper() {
 // Load components when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     loadNavbar();
-    loadFooter();
+    // Footer is already in HTML, no need to load it
     
     // Also initialize if navbar is already loaded
     if (document.querySelector('.nav-item.dropdown')) {
